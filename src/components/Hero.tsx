@@ -59,32 +59,9 @@ const Hero = () => {
       />
 
       <div className="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center min-h-screen">
-        {/* Logo */}
-        <div className="mb-12 animate-fade-in">
-          <img src={logoOlpe} alt="Olpe Colchões e Sofás" className="h-16 md:h-20 lg:h-24" />
-        </div>
-
-        {/* Main Text with Golden Shadow */}
-        <div className="mb-4 animate-fade-in">
-          <p 
-            className="text-base md:text-lg lg:text-xl max-w-2xl mx-auto"
-            style={{ 
-              textShadow: '0 0 30px rgba(200, 170, 119, 0.4), 0 0 60px rgba(200, 170, 119, 0.2)'
-            }}
-          >
-            Produtos criados com conceito francês
-          </p>
-        </div>
-
-        {/* Golden Line */}
+        {/* Categories Strip with Glassmorphism - Moved to top */}
         <div 
-          className="w-24 h-px mb-16 animate-fade-in"
-          style={{ backgroundColor: '#C8AA77' }}
-        />
-
-        {/* Categories Strip with Glassmorphism */}
-        <div 
-          className="w-full max-w-5xl py-10 px-6 rounded-3xl animate-fade-in"
+          className="w-full max-w-5xl py-10 px-6 rounded-3xl animate-fade-in mb-12"
           style={{
             backgroundColor: 'rgba(20, 44, 70, 0.6)',
             backdropFilter: 'blur(12px)',
@@ -133,6 +110,51 @@ const Hero = () => {
             ))}
           </div>
         </div>
+
+        {/* Logo */}
+        <div className="mb-8 animate-fade-in">
+          <img src={logoOlpe} alt="Olpe" className="h-16 md:h-20 lg:h-24" />
+        </div>
+
+        {/* Banner Space for Promotions */}
+        <div 
+          className="w-full max-w-3xl py-8 px-6 rounded-2xl mb-8 animate-fade-in"
+          style={{
+            backgroundColor: 'rgba(200, 170, 119, 0.15)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            border: '1px solid rgba(200, 170, 119, 0.3)',
+            boxShadow: '0 4px 20px rgba(200, 170, 119, 0.1)'
+          }}
+        >
+          <p 
+            className="text-lg md:text-xl lg:text-2xl font-semibold"
+            style={{ 
+              color: '#C8AA77',
+              textShadow: '0 2px 10px rgba(200, 170, 119, 0.3)'
+            }}
+          >
+            Espaço para promoções vigentes
+          </p>
+        </div>
+
+        {/* Main Text with Golden Shadow */}
+        <div className="mb-4 animate-fade-in">
+          <p 
+            className="text-base md:text-lg lg:text-xl max-w-2xl mx-auto text-white"
+            style={{ 
+              textShadow: '0 0 30px rgba(200, 170, 119, 0.4), 0 0 60px rgba(200, 170, 119, 0.2)'
+            }}
+          >
+            Produtos criados com conceito francês
+          </p>
+        </div>
+
+        {/* Golden Line */}
+        <div 
+          className="w-24 h-px animate-fade-in"
+          style={{ backgroundColor: '#C8AA77' }}
+        />
       </div>
     </section>
   );
