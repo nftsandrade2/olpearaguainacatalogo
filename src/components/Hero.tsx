@@ -60,29 +60,73 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center min-h-screen">
         {/* Logo */}
-        <div className="mb-8 animate-fade-in">
+        <div className="mb-12 animate-fade-in">
           <img src={logoOlpe} alt="Olpe Colchões e Sofás" className="h-16 md:h-20 lg:h-24" />
         </div>
 
-        {/* Texts below logo */}
-        <p className="text-2xl md:text-3xl lg:text-4xl mb-4 animate-fade-in" style={{ color: '#C8AA77' }}>
-          colchões e sofás
-        </p>
-        <p className="text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-16 animate-fade-in">
-          Produtos criados com conceito francês
-        </p>
+        {/* Main Text with Golden Shadow */}
+        <div className="mb-4 animate-fade-in">
+          <p 
+            className="text-base md:text-lg lg:text-xl max-w-2xl mx-auto"
+            style={{ 
+              textShadow: '0 0 30px rgba(200, 170, 119, 0.4), 0 0 60px rgba(200, 170, 119, 0.2)'
+            }}
+          >
+            Produtos criados com conceito francês
+          </p>
+        </div>
 
-        {/* Categories Strip */}
-        <div className="w-full max-w-5xl bg-primary/80 backdrop-blur-sm py-8 px-4 rounded-lg shadow-2xl animate-fade-in">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        {/* Golden Line */}
+        <div 
+          className="w-24 h-px mb-16 animate-fade-in"
+          style={{ backgroundColor: '#C8AA77' }}
+        />
+
+        {/* Categories Strip with Glassmorphism */}
+        <div 
+          className="w-full max-w-5xl py-10 px-6 rounded-3xl animate-fade-in"
+          style={{
+            backgroundColor: 'rgba(20, 44, 70, 0.6)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 60px rgba(200, 170, 119, 0.1)',
+            border: '1px solid rgba(255, 255, 255, 0.1)'
+          }}
+        >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
             {categories.map((category, index) => (
               <button
                 key={index}
                 onClick={() => scrollToSection(category.sectionId)}
-                className="flex flex-col items-center gap-3 hover:scale-110 transition-transform duration-300 cursor-pointer"
+                className="flex flex-col items-center gap-4 group cursor-pointer transition-all duration-300"
               >
-                <category.icon size={48} strokeWidth={1.5} className="text-primary-foreground" />
-                <span className="text-sm md:text-base font-semibold tracking-wider">
+                <div className="relative">
+                  <category.icon 
+                    size={52} 
+                    strokeWidth={1.5} 
+                    className="text-white transition-all duration-300 group-hover:scale-105"
+                    style={{
+                      filter: 'drop-shadow(0 0 8px rgba(200, 170, 119, 0)) drop-shadow(0 0 16px rgba(200, 170, 119, 0))',
+                    }}
+                  />
+                  <style>{`
+                    .group:hover svg {
+                      filter: drop-shadow(0 0 8px rgba(200, 170, 119, 0.6)) drop-shadow(0 0 16px rgba(200, 170, 119, 0.3)) !important;
+                    }
+                  `}</style>
+                </div>
+                <span 
+                  className="text-sm md:text-base font-semibold tracking-widest uppercase text-white transition-all duration-300"
+                  style={{
+                    letterSpacing: '0.15em',
+                    textShadow: '0 0 0px rgba(255, 255, 255, 0)',
+                  }}
+                >
+                  <style>{`
+                    .group:hover span {
+                      text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3) !important;
+                    }
+                  `}</style>
                   {category.label}
                 </span>
               </button>
