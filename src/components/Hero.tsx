@@ -63,7 +63,7 @@ const Hero = () => {
         <div 
           className="w-full max-w-4xl py-4 px-6 rounded-2xl animate-fade-in mb-12"
           style={{
-            backgroundColor: 'rgba(20, 44, 70, 0.4)',
+            backgroundColor: 'rgba(12, 26, 42, 0.5)',
             backdropFilter: 'blur(10px)',
             WebkitBackdropFilter: 'blur(10px)',
             boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2), 0 0 30px rgba(200, 170, 119, 0.08)',
