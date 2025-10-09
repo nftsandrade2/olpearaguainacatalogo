@@ -1,4 +1,5 @@
 import logoOlpe from "@/assets/logo-olpe.png";
+import heroBackground from "@/assets/hero-background.webp";
 import { Bed, Sofa, Armchair, Layers } from "lucide-react";
 
 const Hero = () => {
@@ -20,14 +21,40 @@ const Hero = () => {
     <section
       id="inicio"
       className="min-h-screen flex flex-col items-center justify-center text-primary-foreground relative overflow-hidden"
-      style={{ background: "var(--hero-gradient)" }}
     >
-      {/* Dotted Pattern Background */}
+      {/* Background Image */}
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0"
         style={{
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px)',
-          backgroundSize: '30px 30px'
+          backgroundImage: `url(${heroBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
+      {/* Dark Blue Overlay */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          backgroundColor: 'rgba(12, 26, 42, 0.85)'
+        }}
+      />
+      
+      {/* Dotted Texture */}
+      <div 
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px)',
+          backgroundSize: '20px 20px'
+        }}
+      />
+      
+      {/* Vignette Effect */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 60%, rgba(0,0,0,0.3) 100%)'
         }}
       />
 
@@ -38,7 +65,7 @@ const Hero = () => {
         </div>
 
         {/* Texts below logo */}
-        <p className="text-2xl md:text-3xl lg:text-4xl text-accent mb-4 animate-fade-in">
+        <p className="text-2xl md:text-3xl lg:text-4xl mb-4 animate-fade-in" style={{ color: '#C8AA77' }}>
           colchões e sofás
         </p>
         <p className="text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-16 animate-fade-in">
