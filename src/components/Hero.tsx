@@ -61,47 +61,48 @@ const Hero = () => {
       <div className="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center min-h-screen">
         {/* Categories Strip with Glassmorphism - Moved to top */}
         <div 
-          className="w-full max-w-5xl py-10 px-6 rounded-3xl animate-fade-in mb-12"
+          className="w-full max-w-4xl py-4 px-6 rounded-2xl animate-fade-in mb-12"
           style={{
-            backgroundColor: 'rgba(20, 44, 70, 0.6)',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
-            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 60px rgba(200, 170, 119, 0.1)',
-            border: '1px solid rgba(255, 255, 255, 0.1)'
+            backgroundColor: 'rgba(20, 44, 70, 0.4)',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2), 0 0 30px rgba(200, 170, 119, 0.08)',
+            border: '1px solid rgba(255, 255, 255, 0.08)'
           }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+          <div className="grid grid-cols-4 gap-4 md:gap-6">
             {categories.map((category, index) => (
               <button
                 key={index}
                 onClick={() => scrollToSection(category.sectionId)}
-                className="flex flex-col items-center gap-4 group cursor-pointer transition-all duration-300"
+                className="flex flex-col items-center gap-2 group cursor-pointer transition-all duration-300"
               >
                 <div className="relative">
                   <category.icon 
-                    size={52} 
-                    strokeWidth={1.5} 
+                    size={32} 
+                    strokeWidth={1.2} 
                     className="text-white transition-all duration-300 group-hover:scale-105"
                     style={{
-                      filter: 'drop-shadow(0 0 8px rgba(200, 170, 119, 0)) drop-shadow(0 0 16px rgba(200, 170, 119, 0))',
+                      filter: 'drop-shadow(0 0 4px rgba(200, 170, 119, 0)) drop-shadow(0 0 8px rgba(200, 170, 119, 0))',
                     }}
                   />
                   <style>{`
                     .group:hover svg {
-                      filter: drop-shadow(0 0 8px rgba(200, 170, 119, 0.6)) drop-shadow(0 0 16px rgba(200, 170, 119, 0.3)) !important;
+                      filter: drop-shadow(0 0 6px rgba(200, 170, 119, 0.5)) drop-shadow(0 0 12px rgba(200, 170, 119, 0.25)) !important;
                     }
                   `}</style>
                 </div>
                 <span 
-                  className="text-sm md:text-base font-semibold tracking-widest uppercase text-white transition-all duration-300"
+                  className="text-xs md:text-sm font-medium tracking-wider uppercase text-white/90 transition-all duration-300"
                   style={{
-                    letterSpacing: '0.15em',
+                    letterSpacing: '0.1em',
                     textShadow: '0 0 0px rgba(255, 255, 255, 0)',
                   }}
                 >
                   <style>{`
                     .group:hover span {
-                      text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3) !important;
+                      color: white;
+                      text-shadow: 0 2px 6px rgba(255, 255, 255, 0.25) !important;
                     }
                   `}</style>
                   {category.label}
