@@ -1,75 +1,58 @@
-import { Star } from "lucide-react";
-
 const TopBar = () => {
   const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
-
-  const links = [
-    { label: "Contato", id: "contato" },
-    { label: "Localização", id: "localizacao" },
-    { label: "Quem Somos", id: "sobre" },
-    { label: "Avaliações", id: "avaliacoes" },
-  ];
 
   return (
     <div
-      className="w-full fixed top-0 left-0 z-50 text-xs"
+      className="fixed left-0 top-0 z-50 w-full text-xs"
       style={{
-        backgroundColor: "rgba(12, 26, 42, 0.92)",
-        backdropFilter: "blur(10px)",
-        WebkitBackdropFilter: "blur(10px)",
-        borderBottom: "1px solid rgba(200, 170, 119, 0.18)",
+        backgroundColor: "rgba(245, 242, 236, 0.96)",
+        borderBottom: "1px solid rgba(12, 26, 42, 0.08)",
+        boxShadow: "0 4px 18px rgba(0,0,0,0.05)",
       }}
     >
-      <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4">
-        <nav className="flex items-center gap-4 md:gap-6 overflow-x-auto">
-          {links.map((l) => (
+      <div className="container mx-auto flex h-[64px] items-center justify-between gap-4 px-4 md:px-6">
+        <nav className="hidden items-center gap-8 md:flex">
+          {[
+            { label: "Contato", id: "contato" },
+            { label: "Localização", id: "localizacao" },
+            { label: "Quem Somos", id: "sobre" },
+            { label: "Avaliações", id: "avaliacoes" },
+          ].map((item) => (
             <button
-              key={l.id}
-              onClick={() => scrollToSection(l.id)}
-              className="text-white/80 hover:text-[#C8AA77] transition-colors tracking-wider uppercase whitespace-nowrap"
-              style={{ letterSpacing: "0.08em" }}
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-sm font-semibold uppercase tracking-[0.08em] text-[#10263B] transition-colors duration-300 hover:text-[#9F7D46]"
             >
-              {l.label}
+              {item.label}
             </button>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3 md:gap-4">
-          <button
-            onClick={() => scrollToSection("avaliacoes")}
-            className="hidden md:flex items-center gap-1.5 text-white/90 hover:text-[#C8AA77] transition-colors whitespace-nowrap"
-            aria-label="77 avaliações no Google"
-          >
-            <Star size={12} fill="#C8AA77" stroke="#C8AA77" />
-            <span style={{ letterSpacing: "0.05em" }}>77 avaliações no Google</span>
-          </button>
+        <button
+          onClick={() => scrollToSection("contato")}
+          className="text-xs font-semibold uppercase tracking-[0.08em] text-[#10263B] md:hidden"
+        >
+          Contato
+        </button>
 
+        <div className="flex items-center gap-3">
           <button
             onClick={() => scrollToSection("localizacao")}
-            className="hidden sm:inline-flex items-center px-3 py-1 rounded-full uppercase tracking-wider transition-all hover:scale-105 whitespace-nowrap"
-            style={{
-              border: "1px solid rgba(200, 170, 119, 0.5)",
-              color: "#C8AA77",
-              letterSpacing: "0.1em",
-            }}
+            className="hidden rounded-full border border-[#C7A66A]/50 px-5 py-2 text-sm font-semibold uppercase tracking-[0.08em] text-[#10263B] transition-all duration-300 hover:bg-[#C7A66A]/10 md:inline-flex"
           >
             Como chegar
           </button>
 
           <a
-            href="https://wa.me/5500000000000"
+            href="https://wa.me/5563991217070"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-3 py-1 rounded-full uppercase tracking-wider transition-all hover:scale-105 whitespace-nowrap font-medium"
-            style={{
-              backgroundColor: "#C8AA77",
-              color: "#0C1A2A",
-              letterSpacing: "0.1em",
-              boxShadow: "0 2px 12px rgba(200, 170, 119, 0.3)",
-            }}
+            className="inline-flex rounded-full bg-[#10263B] px-5 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-white transition-all duration-300 hover:bg-[#183A59] md:text-sm"
           >
             Falar no WhatsApp
           </a>
