@@ -163,25 +163,6 @@ const Hero = () => {
             ))}
           </div>
         </div>
-
-
-        {/* Main Text with Golden Shadow */}
-        <div className="mb-4 animate-fade-in">
-          <p 
-            className="text-base md:text-lg lg:text-xl max-w-2xl mx-auto text-white"
-            style={{ 
-              textShadow: '0 0 30px rgba(200, 170, 119, 0.4), 0 0 60px rgba(200, 170, 119, 0.2)'
-            }}
-          >
-            Produtos criados com conceito francês
-          </p>
-        </div>
-
-        {/* Golden Line */}
-        <div 
-          className="w-24 h-px animate-fade-in"
-          style={{ backgroundColor: '#C8AA77' }}
-        />
       </div>
     </section>
   );
