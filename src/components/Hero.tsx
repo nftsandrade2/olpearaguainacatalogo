@@ -58,10 +58,37 @@ const Hero = () => {
         }}
       />
 
-      <div className="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center min-h-screen">
-        {/* Categories Strip with Glassmorphism - Moved to top */}
-        <div 
-          className="w-full max-w-4xl py-4 px-6 rounded-2xl animate-fade-in mb-12"
+      <div className="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center min-h-screen pt-12">
+        {/* Logo */}
+        <div className="mb-6 animate-fade-in mt-6">
+          <img src={logoOlpe} alt="Olpe" className="h-16 md:h-20 lg:h-24" />
+        </div>
+
+        {/* Banner Space for Promotions */}
+        <div
+          className="w-full max-w-3xl py-6 px-6 rounded-2xl mb-8 animate-fade-in"
+          style={{
+            backgroundColor: 'rgba(200, 170, 119, 0.15)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            border: '1px solid rgba(200, 170, 119, 0.3)',
+            boxShadow: '0 4px 20px rgba(200, 170, 119, 0.1)'
+          }}
+        >
+          <p
+            className="text-base md:text-lg lg:text-xl font-semibold"
+            style={{
+              color: '#C8AA77',
+              textShadow: '0 2px 10px rgba(200, 170, 119, 0.3)'
+            }}
+          >
+            Espaço para promoções vigentes
+          </p>
+        </div>
+
+        {/* Categories Strip with Glassmorphism */}
+        <div
+          className="w-full max-w-4xl py-4 px-6 rounded-2xl animate-fade-in mb-10"
           style={{
             backgroundColor: 'rgba(12, 26, 42, 0.5)',
             backdropFilter: 'blur(10px)',
@@ -112,32 +139,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Logo */}
-        <div className="mb-8 animate-fade-in">
-          <img src={logoOlpe} alt="Olpe" className="h-16 md:h-20 lg:h-24" />
-        </div>
-
-        {/* Banner Space for Promotions */}
-        <div 
-          className="w-full max-w-3xl py-8 px-6 rounded-2xl mb-8 animate-fade-in"
-          style={{
-            backgroundColor: 'rgba(200, 170, 119, 0.15)',
-            backdropFilter: 'blur(8px)',
-            WebkitBackdropFilter: 'blur(8px)',
-            border: '1px solid rgba(200, 170, 119, 0.3)',
-            boxShadow: '0 4px 20px rgba(200, 170, 119, 0.1)'
-          }}
-        >
-          <p 
-            className="text-lg md:text-xl lg:text-2xl font-semibold"
-            style={{ 
-              color: '#C8AA77',
-              textShadow: '0 2px 10px rgba(200, 170, 119, 0.3)'
-            }}
-          >
-            Espaço para promoções vigentes
-          </p>
-        </div>
 
         {/* Main Text with Golden Shadow */}
         <div className="mb-4 animate-fade-in">
