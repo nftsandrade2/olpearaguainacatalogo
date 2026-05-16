@@ -10,12 +10,13 @@ const TopBar = () => {
     <div
       className="fixed left-0 top-0 z-50 w-full text-xs"
       style={{
-        backgroundColor: "rgba(245, 242, 236, 0.96)",
-        borderBottom: "1px solid rgba(12, 26, 42, 0.08)",
-        boxShadow: "0 4px 18px rgba(0,0,0,0.05)",
+        backgroundColor: "rgba(13, 79, 122, 0.96)",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
+        boxShadow: "0 4px 18px rgba(0,0,0,0.12)",
       }}
     >
       <div className="container mx-auto flex h-[64px] items-center justify-between gap-4 px-4 md:px-6">
+        {/* NAV */}
         <nav className="hidden items-center gap-8 md:flex">
           {[
             { label: "Contato", id: "contato" },
@@ -26,24 +27,31 @@ const TopBar = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-sm font-semibold uppercase tracking-[0.08em] text-[#10263B] transition-colors duration-300 hover:text-[#9F7D46]"
+              className="text-sm font-semibold uppercase tracking-[0.08em] text-white/90 transition-colors duration-300 hover:text-[#D6B67A]"
             >
               {item.label}
             </button>
           ))}
         </nav>
 
+        {/* MOBILE */}
         <button
           onClick={() => scrollToSection("contato")}
-          className="text-xs font-semibold uppercase tracking-[0.08em] text-[#10263B] md:hidden"
+          className="text-xs font-semibold uppercase tracking-[0.08em] text-white md:hidden"
         >
           Contato
         </button>
 
+        {/* CTA */}
         <div className="flex items-center gap-3">
           <button
             onClick={() => scrollToSection("localizacao")}
-            className="hidden rounded-full border border-[#C7A66A]/50 px-5 py-2 text-sm font-semibold uppercase tracking-[0.08em] text-[#10263B] transition-all duration-300 hover:bg-[#C7A66A]/10 md:inline-flex"
+            className="hidden rounded-full px-5 py-2 text-sm font-semibold uppercase tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] md:inline-flex"
+            style={{
+              backgroundColor: "rgba(248, 247, 243, 0.96)",
+              color: "#0D4F7A",
+              border: "1px solid rgba(255,255,255,0.15)",
+            }}
           >
             Como chegar
           </button>
@@ -52,7 +60,12 @@ const TopBar = () => {
             href="https://wa.me/5563991217070"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex rounded-full bg-[#10263B] px-5 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-white transition-all duration-300 hover:bg-[#183A59] md:text-sm"
+            className="inline-flex rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] md:text-sm"
+            style={{
+              backgroundColor: "rgba(248, 247, 243, 0.96)",
+              color: "#0D4F7A",
+              boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
+            }}
           >
             Falar no WhatsApp
           </a>
