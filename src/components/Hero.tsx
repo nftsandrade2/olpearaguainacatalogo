@@ -21,64 +21,63 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-[86vh] flex-col items-center justify-center overflow-hidden text-primary-foreground"
+      className="relative flex min-h-[78vh] flex-col items-center justify-center overflow-hidden text-primary-foreground"
     >
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${heroBackground})`,
         }}
       />
 
-      {/* Premium Warm Cinematic Overlay */}
+      {/* Premium Warm Overlay */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-[1]"
         style={{
-          background:
-            "linear-gradient(180deg, rgba(20,16,12,0.58) 0%, rgba(28,22,16,0.42) 38%, rgba(18,14,10,0.52) 100%)",
+          background: "linear-gradient(180deg, rgba(10,8,6,0.64) 0%, rgba(18,13,9,0.52) 48%, rgba(8,6,4,0.66) 100%)",
         }}
       />
 
       {/* Subtle Dotted Texture */}
       <div
-        className="absolute inset-0 opacity-[0.025]"
+        className="absolute inset-0 z-[2] opacity-[0.018]"
         style={{
-          backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.45) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.42) 1px, transparent 1px)",
           backgroundSize: "22px 22px",
         }}
       />
 
       {/* Soft Vignette */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 z-[3]"
         style={{
-          background: "radial-gradient(ellipse at center, transparent 0%, transparent 70%, rgba(0,0,0,0.25) 100%)",
+          background: "radial-gradient(ellipse at center, transparent 0%, transparent 68%, rgba(0,0,0,0.28) 100%)",
         }}
       />
 
-      <div className="container relative z-10 mx-auto flex min-h-[86vh] flex-col items-center justify-center px-4 pt-14 text-center">
+      <div className="container relative z-10 mx-auto flex min-h-[78vh] flex-col items-center justify-center px-4 pt-10 text-center">
         {/* Logo */}
-        <div className="mb-5 mt-4 animate-fade-in">
+        <div className="mb-4 mt-3 animate-fade-in">
           <img
             src={logoOlpe}
             alt="Olpe colchões e sofás"
-            className="h-16 w-auto md:h-20 lg:h-24"
+            className="h-14 w-auto md:h-18 lg:h-20"
             loading="eager"
             decoding="async"
             fetchPriority="high"
             style={{
-              filter: "drop-shadow(0 6px 20px rgba(0,0,0,0.35))",
+              filter: "drop-shadow(0 6px 20px rgba(0,0,0,0.38))",
             }}
           />
         </div>
 
         {/* Headline */}
         <h1
-          className="mx-auto mb-8 max-w-3xl animate-fade-in text-center text-2xl font-light leading-tight text-white md:text-3xl lg:text-4xl"
+          className="mx-auto mb-6 max-w-3xl animate-fade-in text-center text-2xl font-light leading-tight text-white md:text-3xl lg:text-[2.45rem]"
           style={{
             letterSpacing: "0.01em",
-            textShadow: "0 4px 20px rgba(0,0,0,0.55)",
+            textShadow: "0 4px 22px rgba(0,0,0,0.62)",
           }}
         >
           Conforto e sofisticação para seu lar.
@@ -86,11 +85,11 @@ const Hero = () => {
 
         {/* Categories Strip */}
         <div
-          className="mb-4 w-full max-w-4xl animate-fade-in rounded-[1.4rem] px-3 py-3 md:px-4 md:py-4"
+          className="mb-3 w-full max-w-4xl animate-fade-in rounded-[1.25rem] px-3 py-2 md:px-4 md:py-3"
           style={{
             backgroundColor: "rgba(248, 247, 243, 0.96)",
-            boxShadow: "0 18px 46px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.65)",
-            border: "1px solid rgba(200,170,119,0.24)",
+            boxShadow: "0 14px 34px rgba(0,0,0,0.20)",
+            border: "1px solid rgba(200,170,119,0.22)",
           }}
         >
           <div className="grid grid-cols-2 md:grid-cols-4">
@@ -100,14 +99,14 @@ const Hero = () => {
                 type="button"
                 onClick={() => scrollToSection(category.sectionId)}
                 aria-label={`Ir para seção ${category.label}`}
-                className={`group relative flex flex-col items-center justify-center gap-2 rounded-2xl px-3 py-4 transition-all duration-300 hover:bg-white/75 focus:outline-none focus:ring-2 focus:ring-[#C8AA77]/50 md:py-5 ${
+                className={`group relative flex flex-col items-center justify-center gap-1.5 rounded-xl px-3 py-3 transition-all duration-300 hover:bg-white/75 focus:outline-none focus:ring-2 focus:ring-[#C8AA77]/50 md:py-3 ${
                   index !== categories.length - 1
-                    ? "md:after:absolute md:after:right-0 md:after:top-1/2 md:after:h-14 md:after:w-px md:after:-translate-y-1/2 md:after:bg-[#0C1A2A]/10"
+                    ? "md:after:absolute md:after:right-0 md:after:top-1/2 md:after:h-10 md:after:w-px md:after:-translate-y-1/2 md:after:bg-[#0C1A2A]/10"
                     : ""
                 }`}
               >
                 <category.icon
-                  size={28}
+                  size={24}
                   strokeWidth={1.45}
                   className="text-[#0C1A2A] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-[#9F7D46]"
                 />
@@ -116,7 +115,7 @@ const Hero = () => {
                   {category.label}
                 </span>
 
-                <span className="mt-1 h-[2px] w-7 rounded-full bg-[#C8AA77] opacity-0 transition-all duration-300 group-hover:opacity-100" />
+                <span className="mt-0.5 h-[2px] w-5 rounded-full bg-[#C8AA77] opacity-0 transition-all duration-300 group-hover:opacity-100" />
               </button>
             ))}
           </div>
