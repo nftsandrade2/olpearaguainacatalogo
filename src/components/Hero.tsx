@@ -66,54 +66,18 @@ const Hero = () => {
 
         {/* Headline */}
         <h1
-          className="text-3xl md:text-5xl lg:text-6xl font-light max-w-4xl mx-auto mb-5 animate-fade-in leading-tight text-white"
+          className="text-3xl md:text-5xl lg:text-6xl font-light max-w-4xl mx-auto mb-10 animate-fade-in leading-tight text-white text-center"
           style={{
             letterSpacing: '0.01em',
             textShadow: '0 2px 30px rgba(0,0,0,0.4)',
           }}
         >
-          Conforto, elegância e qualidade para transformar seu lar
+          Onde conforto e elegância se encontram.
         </h1>
-
-        {/* Subheadline */}
-        <p
-          className="text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-8 animate-fade-in text-white/80 font-light"
-        >
-          Sofás, colchões, camas e poltronas com atendimento personalizado e design sofisticado.
-        </p>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-10 animate-fade-in">
-          <a
-            href="https://wa.me/5500000000000"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-7 py-3 rounded-full text-sm md:text-base font-medium tracking-wider uppercase transition-all duration-300 hover:scale-105"
-            style={{
-              backgroundColor: '#C8AA77',
-              color: '#0C1A2A',
-              letterSpacing: '0.1em',
-              boxShadow: '0 4px 20px rgba(200, 170, 119, 0.3)',
-            }}
-          >
-            Falar no WhatsApp
-          </a>
-          <button
-            onClick={() => scrollToSection('localizacao')}
-            className="px-7 py-3 rounded-full text-sm md:text-base font-medium tracking-wider uppercase transition-all duration-300 hover:scale-105 text-white"
-            style={{
-              border: '1px solid rgba(200, 170, 119, 0.5)',
-              backgroundColor: 'rgba(255,255,255,0.04)',
-              letterSpacing: '0.1em',
-            }}
-          >
-            Como chegar
-          </button>
-        </div>
 
         {/* Categories Strip with Glassmorphism */}
         <div
-          className="w-full max-w-4xl py-4 px-6 rounded-2xl animate-fade-in mb-10"
+          className="w-full max-w-4xl py-3 px-6 rounded-2xl animate-fade-in mb-8"
           style={{
             backgroundColor: 'rgba(12, 26, 42, 0.5)',
             backdropFilter: 'blur(10px)',
