@@ -37,16 +37,43 @@ const TopBar = () => {
           ))}
         </nav>
 
-        <button
-          onClick={() => scrollToSection("avaliacoes")}
-          className="hidden sm:flex items-center gap-1.5 text-white/90 hover:text-[#C8AA77] transition-colors whitespace-nowrap"
-          aria-label="77 avaliações no Google"
-        >
-          <Star size={12} fill="#C8AA77" stroke="#C8AA77" />
-          <span style={{ letterSpacing: "0.05em" }}>
-            77 avaliações no Google
-          </span>
-        </button>
+        <div className="flex items-center gap-3 md:gap-4">
+          <button
+            onClick={() => scrollToSection("avaliacoes")}
+            className="hidden md:flex items-center gap-1.5 text-white/90 hover:text-[#C8AA77] transition-colors whitespace-nowrap"
+            aria-label="77 avaliações no Google"
+          >
+            <Star size={12} fill="#C8AA77" stroke="#C8AA77" />
+            <span style={{ letterSpacing: "0.05em" }}>77 avaliações no Google</span>
+          </button>
+
+          <button
+            onClick={() => scrollToSection("localizacao")}
+            className="hidden sm:inline-flex items-center px-3 py-1 rounded-full uppercase tracking-wider transition-all hover:scale-105 whitespace-nowrap"
+            style={{
+              border: "1px solid rgba(200, 170, 119, 0.5)",
+              color: "#C8AA77",
+              letterSpacing: "0.1em",
+            }}
+          >
+            Como chegar
+          </button>
+
+          <a
+            href="https://wa.me/5500000000000"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-3 py-1 rounded-full uppercase tracking-wider transition-all hover:scale-105 whitespace-nowrap font-medium"
+            style={{
+              backgroundColor: "#C8AA77",
+              color: "#0C1A2A",
+              letterSpacing: "0.1em",
+              boxShadow: "0 2px 12px rgba(200, 170, 119, 0.3)",
+            }}
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   );
