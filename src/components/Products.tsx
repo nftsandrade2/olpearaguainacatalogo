@@ -315,7 +315,6 @@ interface CategorySectionProps {
   title: string;
   subtitle: string;
   products: Product[];
-  ctaLabel: string;
   bg?: "default" | "muted";
 }
 
@@ -324,7 +323,6 @@ const CategorySection = ({
   title,
   subtitle,
   products,
-  ctaLabel,
   bg = "default",
 }: CategorySectionProps) => (
   <section
