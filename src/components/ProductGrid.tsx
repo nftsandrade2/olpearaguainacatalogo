@@ -40,9 +40,12 @@ const buildWhatsAppLink = (productName: string) => {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 };
 
+const MOBILE_LIMIT = 6;
+
 const ProductGrid = ({ products }: ProductGridProps) => {
   const [selected, setSelected] = useState<Product | null>(null);
   const [activeImage, setActiveImage] = useState<string | null>(null);
+  const [expanded, setExpanded] = useState(false);
 
   const openProduct = (product: Product) => {
     setSelected(product);
@@ -56,16 +59,23 @@ const ProductGrid = ({ products }: ProductGridProps) => {
       ? [selected.image]
       : [];
 
+  const hasMobileOverflow = products.length > MOBILE_LIMIT;
+
   return (
     <>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 md:gap-6">
-        {products.map((product, index) => (
+        {products.map((product, index) => {
+          const hiddenOnMobile =
+            hasMobileOverflow && !expanded && index >= MOBILE_LIMIT;
+          return (
           <button
             key={index}
             type="button"
             onClick={() => openProduct(product)}
             aria-label={`Ver detalhes de ${product.name}`}
-            className="group relative flex flex-col overflow-hidden rounded-xl md:rounded-2xl bg-white border border-border/60 shadow-[0_2px_10px_rgba(12,26,42,0.05)] transition-all duration-300 hover:shadow-[0_12px_28px_rgba(12,26,42,0.12)] md:hover:-translate-y-1 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className={`group relative flex-col overflow-hidden rounded-xl md:rounded-2xl bg-white border border-border/60 shadow-[0_2px_10px_rgba(12,26,42,0.05)] transition-all duration-300 hover:shadow-[0_12px_28px_rgba(12,26,42,0.12)] md:hover:-translate-y-1 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary animate-fade-in ${
+              hiddenOnMobile ? "hidden md:flex" : "flex"
+            }`}
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-muted">
               <img
@@ -91,8 +101,22 @@ const ProductGrid = ({ products }: ProductGridProps) => {
               </p>
             </div>
           </button>
-        ))}
+          );
+        })}
       </div>
+
+      {hasMobileOverflow && (
+        <div className="md:hidden mt-5 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setExpanded((v) => !v)}
+            aria-expanded={expanded}
+            className="inline-flex items-center justify-center rounded-full border border-primary/20 bg-white px-5 py-2.5 text-sm font-medium text-primary shadow-[0_2px_8px_rgba(12,26,42,0.06)] transition-all hover:bg-primary/5 active:scale-[0.98]"
+          >
+            {expanded ? "Ver menos" : "Ver todos os modelos"}
+          </button>
+        </div>
+      )}
 
       <Dialog
         open={!!selected}
