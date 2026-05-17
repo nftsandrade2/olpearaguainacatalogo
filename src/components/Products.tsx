@@ -12,11 +12,6 @@ import camaImage1 from "@/assets/cama-1.jpg";
 import camaImage2 from "@/assets/cama-2.jpg";
 import camaImage3 from "@/assets/cama-3.jpg";
 
-const WHATSAPP_NUMBER = "5563991217070";
-const moreModelsLink = (category: string) =>
-  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    `Olá, gostaria de ver mais modelos de ${category}.`
-  )}`;
 
 const sofaGallery = [sofaImage1, sofaImage2, sofaImage3];
 const colchaoGallery = [colchaoImage1, colchaoImage2, colchaoImage3];
