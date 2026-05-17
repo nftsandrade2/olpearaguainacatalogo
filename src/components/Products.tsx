@@ -348,18 +348,6 @@ const CategorySection = ({
       </div>
 
       <ProductGrid products={products} />
-
-      <div className="flex justify-center mt-10 md:mt-12">
-        <a
-          href={moreModelsLink(ctaLabel)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg bg-primary text-primary-foreground px-5 py-3 text-sm md:text-base font-medium transition-all hover:bg-primary/90 hover:shadow-lg"
-        >
-          <MessageCircle size={18} strokeWidth={2} />
-          Ver mais modelos no WhatsApp
-        </a>
-      </div>
     </div>
   </section>
 );
