@@ -112,11 +112,45 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                   />
                   <DialogClose
                     aria-label="Voltar ao catálogo"
-                    className="absolute top-3 left-3 inline-flex items-center gap-1.5 min-h-[44px] min-w-[44px] px-3.5 py-2 rounded-full bg-white/85 backdrop-blur-md text-primary text-sm font-medium shadow-[0_4px_14px_rgba(12,26,42,0.15)] border border-white/60 transition-all hover:bg-white hover:shadow-[0_6px_18px_rgba(12,26,42,0.22)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    className="absolute top-3 left-3 z-10 inline-flex items-center gap-1.5 min-h-[44px] min-w-[44px] px-3.5 py-2 rounded-full bg-white/85 backdrop-blur-md text-primary text-sm font-medium shadow-[0_4px_14px_rgba(12,26,42,0.15)] border border-white/60 transition-all hover:bg-white hover:shadow-[0_6px_18px_rgba(12,26,42,0.22)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
                     <ArrowLeft size={18} strokeWidth={2.2} />
                     <span>Voltar</span>
                   </DialogClose>
+
+                  {gallery.length > 1 && (
+                    <>
+                      <button
+                        type="button"
+                        aria-label="Imagem anterior"
+                        onClick={() => {
+                          const current = activeImage || selected.image;
+                          const idx = gallery.indexOf(current);
+                          const prev = idx <= 0 ? gallery.length - 1 : idx - 1;
+                          setActiveImage(gallery[prev]);
+                        }}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center h-11 w-11 rounded-full bg-white/85 backdrop-blur-md text-primary shadow-[0_4px_14px_rgba(12,26,42,0.15)] border border-white/60 transition-all hover:bg-white hover:shadow-[0_6px_18px_rgba(12,26,42,0.22)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                      >
+                        <ChevronLeft size={20} strokeWidth={2.2} />
+                      </button>
+                      <button
+                        type="button"
+                        aria-label="Próxima imagem"
+                        onClick={() => {
+                          const current = activeImage || selected.image;
+                          const idx = gallery.indexOf(current);
+                          const next = idx >= gallery.length - 1 ? 0 : idx + 1;
+                          setActiveImage(gallery[next]);
+                        }}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center h-11 w-11 rounded-full bg-white/85 backdrop-blur-md text-primary shadow-[0_4px_14px_rgba(12,26,42,0.15)] border border-white/60 transition-all hover:bg-white hover:shadow-[0_6px_18px_rgba(12,26,42,0.22)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                      >
+                        <ChevronRight size={20} strokeWidth={2.2} />
+                      </button>
+                      <div className="absolute bottom-3 right-3 z-10 rounded-full bg-primary/70 backdrop-blur-md px-2.5 py-1 text-[11px] font-medium text-primary-foreground tabular-nums">
+                        {gallery.indexOf(activeImage || selected.image) + 1}/{gallery.length}
+                      </div>
+                    </>
+                  )}
                 </div>
 
                 {gallery.length > 1 && (
