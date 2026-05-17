@@ -15,8 +15,7 @@ const TopBar = () => {
         boxShadow: "0 4px 18px rgba(0,0,0,0.12)",
       }}
     >
-      <div className="container mx-auto flex h-[64px] items-center justify-between gap-4 px-4 md:px-6">
-        {/* NAV */}
+      <div className="container mx-auto flex h-[54px] items-center justify-between gap-3 px-4 md:h-[60px] md:px-6">
         <nav className="hidden items-center gap-8 md:flex">
           {[
             { label: "Contato", id: "contato" },
@@ -34,15 +33,13 @@ const TopBar = () => {
           ))}
         </nav>
 
-        {/* MOBILE */}
         <button
-          onClick={() => scrollToSection("contato")}
-          className="text-xs font-semibold uppercase tracking-[0.08em] text-white md:hidden"
+          onClick={() => scrollToSection("localizacao")}
+          className="text-xs font-bold uppercase tracking-[0.08em] text-white md:hidden"
         >
-          Contato
+          Como chegar
         </button>
 
-        {/* CTA */}
         <div className="flex items-center gap-3">
           <button
             onClick={() => scrollToSection("localizacao")}
@@ -60,7 +57,7 @@ const TopBar = () => {
             href="https://wa.me/5563991217070"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex rounded-full px-5 py-2 text-xs font-semibold uppercase tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] md:text-sm"
+            className="inline-flex rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] md:px-5 md:text-sm"
             style={{
               backgroundColor: "rgba(248, 247, 243, 0.96)",
               color: "#0D4F7A",
