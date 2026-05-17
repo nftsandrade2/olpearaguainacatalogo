@@ -4,6 +4,11 @@ import sofaImage1 from "@/assets/sofa-1.jpg";
 import sofaImage2 from "@/assets/sofa-2.jpg";
 import sofaImage3 from "@/assets/sofa-3.jpg";
 
+import sofa01 from "@/assets/products/sofas/sofa-01.jpg";
+import sofa02 from "@/assets/products/sofas/sofa-02.jpg";
+import sofa03 from "@/assets/products/sofas/sofa-03.jpg";
+import sofa04 from "@/assets/products/sofas/sofa-04.jpg";
+
 import colchaoImage1 from "@/assets/colchao-1.jpg";
 import colchaoImage2 from "@/assets/colchao-2.jpg";
 import colchaoImage3 from "@/assets/colchao-3.jpg";
@@ -109,35 +114,35 @@ const sofas: Product[] = [
     },
   },
   {
-    name: "Sofá Urban Premium",
-    image: sofaImage1,
-    attributes: "4 lugares • premium",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: sofaGallery,
+    name: "Sofá Champs",
+    image: sofa01,
+    attributes: "retrátil • tecido premium",
+    description: "Sofá retrátil com tecido premium e linhas contemporâneas, ideal para ambientes que pedem conforto e sofisticação.",
+    gallery: [sofa01],
     features: placeholderFeatures,
   },
   {
-    name: "Sofá Living Concept",
-    image: sofaImage2,
-    attributes: "retrátil • premium",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: sofaGallery,
+    name: "Sofá De Ville",
+    image: sofa02,
+    attributes: "tecido + couro • design moderno",
+    description: "Combinação refinada de tecido e couro com braço diferenciado, peça-chave para salas contemporâneas.",
+    gallery: [sofa02],
     features: placeholderFeatures,
   },
   {
-    name: "Sofá Horizon Design",
-    image: sofaImage3,
-    attributes: "modular • sofisticado",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: sofaGallery,
+    name: "Sofá Orfeu",
+    image: sofa03,
+    attributes: "retrátil reclinável • alto conforto",
+    description: "Sofá retrátil e reclinável com encostos generosos e capitonê suave, pensado para máximo relaxamento.",
+    gallery: [sofa03],
     features: placeholderFeatures,
   },
   {
-    name: "Sofá Infinity Comfort",
-    image: sofaImage1,
-    attributes: "luxo • alto conforto",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: sofaGallery,
+    name: "Sofá Torino",
+    image: sofa04,
+    attributes: "2 lugares • capitonê clássico",
+    description: "Design clássico com cabeceira capitonê e pés em madeira, perfeito para ambientes elegantes.",
+    gallery: [sofa04],
     features: placeholderFeatures,
   },
 ];
