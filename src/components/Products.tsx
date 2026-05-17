@@ -8,6 +8,8 @@ import sofa01 from "@/assets/products/sofas/sofa-01.jpg";
 import sofa02 from "@/assets/products/sofas/sofa-02.jpg";
 import sofa03 from "@/assets/products/sofas/sofa-03.jpg";
 import sofa04 from "@/assets/products/sofas/sofa-04.jpg";
+import sofaConectSally from "@/assets/products/sofas/conect-sally.jpg";
+import sofaViena from "@/assets/products/sofas/sofa-viena.jpeg";
 
 import colchaoImage1 from "@/assets/colchao-1.jpg";
 import colchaoImage2 from "@/assets/colchao-2.jpg";
@@ -72,6 +74,24 @@ const sofas: Product[] = [
     attributes: "2 lugares • capitonê clássico",
     description: "Design clássico com acabamento sofisticado e pés em madeira, perfeito para ambientes elegantes.",
     gallery: [sofa04],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Sofá Conect Sally",
+    image: sofaConectSally,
+    attributes: "modular • design contemporâneo",
+    description:
+      "Sofá modular com peças soltas e linhas contemporâneas, ideal para compor ambientes amplos e sofisticados.",
+    gallery: [sofaConectSally],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Sofá Viena",
+    image: sofaViena,
+    attributes: "retrátil • assentos amplos",
+    description:
+      "Sofá retrátil com assentos generosos e capitonê suave, oferecendo conforto envolvente para toda a família.",
+    gallery: [sofaViena],
     features: placeholderFeatures,
   },
   {
