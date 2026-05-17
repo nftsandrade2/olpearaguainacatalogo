@@ -13,6 +13,13 @@ import colchaoImage1 from "@/assets/colchao-1.jpg";
 import colchaoImage2 from "@/assets/colchao-2.jpg";
 import colchaoImage3 from "@/assets/colchao-3.jpg";
 
+import colchaoLouvrePocket from "@/assets/products/colchoes/louvre-pocket.jpeg";
+import colchaoVienaSky from "@/assets/products/colchoes/viena-sky.png";
+import colchaoEssenStrong from "@/assets/products/colchoes/essen-strong.jpg";
+import colchaoLubeckVisco from "@/assets/products/colchoes/lubeck-visco.jpg";
+import colchaoVeranoGel from "@/assets/products/colchoes/verano-gel.jpg";
+import colchaoViennySkyVisco from "@/assets/products/colchoes/vienny-sky-visco.jpg";
+
 import poltronaImage1 from "@/assets/poltrona-1.jpg";
 import poltronaImage2 from "@/assets/poltrona-2.jpg";
 import poltronaImage3 from "@/assets/poltrona-3.jpg";
@@ -149,6 +156,60 @@ const sofas: Product[] = [
 ];
 
 const colchoes: Product[] = [
+  {
+    name: "Colchão Louvre Pocket",
+    image: colchaoLouvrePocket,
+    attributes: "molas pocket • conforto premium",
+    description:
+      "Colchão com molas ensacadas pocket e acabamento sofisticado, oferecendo suporte individualizado e noites de sono verdadeiramente confortáveis.",
+    gallery: [colchaoLouvrePocket],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Colchão Viena Sky",
+    image: colchaoVienaSky,
+    attributes: "pillow top • alto conforto",
+    description:
+      "Colchão com pillow top generoso e acabamento matelassê, pensado para máximo conforto e descanso profundo.",
+    gallery: [colchaoVienaSky],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Colchão Vienny Sky Visco",
+    image: colchaoViennySkyVisco,
+    attributes: "viscoelástico • adaptável",
+    description:
+      "Camada viscoelástica que se adapta ao corpo, aliviando pontos de pressão para um descanso renovador.",
+    gallery: [colchaoViennySkyVisco],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Colchão Lübeck Visco",
+    image: colchaoLubeckVisco,
+    attributes: "visco premium • alto suporte",
+    description:
+      "Colchão visco premium que combina suporte firme e conforto envolvente para noites verdadeiramente restauradoras.",
+    gallery: [colchaoLubeckVisco],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Colchão Verano Gel",
+    image: colchaoVeranoGel,
+    attributes: "tecnologia gel • frescor",
+    description:
+      "Tecnologia gel que proporciona sensação de frescor durante toda a noite, ideal para quem busca conforto térmico.",
+    gallery: [colchaoVeranoGel],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Colchão Essen Strong",
+    image: colchaoEssenStrong,
+    attributes: "firme • alto suporte",
+    description:
+      "Estrutura robusta com suporte firme, indicada para quem precisa de máxima sustentação durante o descanso.",
+    gallery: [colchaoEssenStrong],
+    features: placeholderFeatures,
+  },
   {
     name: "Colchão Premium Comfort",
     image: colchaoImage1,
