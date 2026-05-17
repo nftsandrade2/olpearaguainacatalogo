@@ -1,4 +1,3 @@
-import { MessageCircle } from "lucide-react";
 import ProductGrid, { type Product } from "./ProductGrid";
 import sofaImage1 from "@/assets/sofa-1.jpg";
 import sofaImage2 from "@/assets/sofa-2.jpg";
@@ -13,11 +12,6 @@ import camaImage1 from "@/assets/cama-1.jpg";
 import camaImage2 from "@/assets/cama-2.jpg";
 import camaImage3 from "@/assets/cama-3.jpg";
 
-const WHATSAPP_NUMBER = "5563991217070";
-const moreModelsLink = (category: string) =>
-  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    `Olá, gostaria de ver mais modelos de ${category}.`
-  )}`;
 
 const sofaGallery = [sofaImage1, sofaImage2, sofaImage3];
 const colchaoGallery = [colchaoImage1, colchaoImage2, colchaoImage3];
@@ -321,7 +315,6 @@ interface CategorySectionProps {
   title: string;
   subtitle: string;
   products: Product[];
-  ctaLabel: string;
   bg?: "default" | "muted";
 }
 
@@ -330,7 +323,6 @@ const CategorySection = ({
   title,
   subtitle,
   products,
-  ctaLabel,
   bg = "default",
 }: CategorySectionProps) => (
   <section
@@ -348,18 +340,6 @@ const CategorySection = ({
       </div>
 
       <ProductGrid products={products} />
-
-      <div className="flex justify-center mt-10 md:mt-12">
-        <a
-          href={moreModelsLink(ctaLabel)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg bg-primary text-primary-foreground px-5 py-3 text-sm md:text-base font-medium transition-all hover:bg-primary/90 hover:shadow-lg"
-        >
-          <MessageCircle size={18} strokeWidth={2} />
-          Ver mais modelos no WhatsApp
-        </a>
-      </div>
     </div>
   </section>
 );
