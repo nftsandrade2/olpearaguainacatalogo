@@ -8,6 +8,8 @@ import sofa01 from "@/assets/products/sofas/sofa-01.jpg";
 import sofa02 from "@/assets/products/sofas/sofa-02.jpg";
 import sofa03 from "@/assets/products/sofas/sofa-03.jpg";
 import sofa04 from "@/assets/products/sofas/sofa-04.jpg";
+import sofaConectSally from "@/assets/products/sofas/conect-sally.jpg";
+import sofaViena from "@/assets/products/sofas/sofa-viena.jpeg";
 
 import colchaoImage1 from "@/assets/colchao-1.jpg";
 import colchaoImage2 from "@/assets/colchao-2.jpg";
