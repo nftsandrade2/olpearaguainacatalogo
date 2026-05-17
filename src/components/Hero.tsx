@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-[76vh] flex-col items-center justify-center overflow-hidden text-primary-foreground md:min-h-[78vh]"
+      className="relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden text-primary-foreground md:min-h-[76vh]"
     >
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -30,14 +30,14 @@ const Hero = () => {
       <div
         className="absolute inset-0 z-[1]"
         style={{
-          background: "linear-gradient(180deg, rgba(10,8,6,0.78) 0%, rgba(18,13,9,0.66) 48%, rgba(8,6,4,0.82) 100%)",
+          background: "linear-gradient(180deg, rgba(10,8,6,0.76) 0%, rgba(18,13,9,0.64) 48%, rgba(8,6,4,0.80) 100%)",
         }}
       />
 
       <div
-        className="absolute inset-0 z-[2] opacity-[0.014]"
+        className="absolute inset-0 z-[2] opacity-[0.01]"
         style={{
-          backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.38) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.34) 1px, transparent 1px)",
           backgroundSize: "22px 22px",
         }}
       />
@@ -45,11 +45,11 @@ const Hero = () => {
       <div
         className="absolute inset-0 z-[3]"
         style={{
-          background: "radial-gradient(ellipse at center, transparent 0%, transparent 68%, rgba(0,0,0,0.32) 100%)",
+          background: "radial-gradient(ellipse at center, transparent 0%, transparent 70%, rgba(0,0,0,0.30) 100%)",
         }}
       />
 
-      <div className="container relative z-10 mx-auto flex min-h-[76vh] flex-col items-center justify-start px-4 pt-[110px] text-center md:min-h-[78vh] md:pt-[112px]">
+      <div className="container relative z-10 mx-auto flex min-h-[72vh] flex-col items-center justify-start px-4 pt-[102px] text-center md:min-h-[76vh] md:pt-[108px]">
         <div className="mb-3 animate-fade-in">
           <img
             src={logoOlpe}
@@ -74,12 +74,12 @@ const Hero = () => {
           Conforto e sofisticação para seu lar.
         </h1>
 
-        <p className="mb-3 animate-fade-in text-[11px] font-normal uppercase tracking-[0.14em] text-white/60 md:text-xs">
+        <p className="mb-3 animate-fade-in text-[10px] font-medium uppercase tracking-[0.13em] text-white/45 md:text-xs md:text-white/55">
           Conheça nossos modelos
         </p>
 
         <div
-          className="mb-3 w-full max-w-[88%] animate-fade-in rounded-[1rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
+          className="mb-3 w-full max-w-[86%] animate-fade-in rounded-[0.95rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
           style={{
             backgroundColor: "rgba(248, 247, 243, 0.95)",
             boxShadow: "0 8px 20px rgba(0,0,0,0.14)",
@@ -115,7 +115,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <p className="mt-4 animate-fade-in text-[10px] font-medium uppercase tracking-[0.18em] text-white/55 md:text-xs">
+        <p className="mt-4 animate-fade-in text-[10px] font-medium uppercase tracking-[0.18em] text-white/50 md:text-xs">
           Araguaína - TO
         </p>
       </div>
