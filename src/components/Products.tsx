@@ -35,6 +35,39 @@ const placeholderFeatures = {
 
 const sofas: Product[] = [
   {
+    name: "Sofá Champs",
+    image: sofa01,
+    attributes: "retrátil • tecido premium",
+    description:
+      "Sofá retrátil com tecido premium e linhas contemporâneas, ideal para ambientes que pedem conforto e sofisticação.",
+    gallery: [sofa01],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Sofá De Ville",
+    image: sofa02,
+    attributes: "tecido + couro • design moderno",
+    description: "Combinação refinada de tecido e couro com braço diferenciado, peça-chave para salas contemporâneas.",
+    gallery: [sofa02],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Sofá Orfeu",
+    image: sofa03,
+    attributes: "retrátil reclinável • alto conforto",
+    description: "Sofá retrátil e reclinável com encostos generosos e capitonê suave, pensado para máximo relaxamento.",
+    gallery: [sofa03],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Sofá Torino",
+    image: sofa04,
+    attributes: "2 lugares • capitonê clássico",
+    description: "Design clássico com acabamento sofisticado e pés em madeira, perfeito para ambientes elegantes.",
+    gallery: [sofa04],
+    features: placeholderFeatures,
+  },
+  {
     name: "Sofá Elegance Premium",
     image: sofaImage1,
     attributes: "3 lugares • tecido premium",
@@ -112,38 +145,6 @@ const sofas: Product[] = [
       conforto: "Estrutura reforçada",
       acabamento: "Capitonê manual",
     },
-  },
-  {
-    name: "Sofá Champs",
-    image: sofa01,
-    attributes: "retrátil • tecido premium",
-    description: "Sofá retrátil com tecido premium e linhas contemporâneas, ideal para ambientes que pedem conforto e sofisticação.",
-    gallery: [sofa01],
-    features: placeholderFeatures,
-  },
-  {
-    name: "Sofá De Ville",
-    image: sofa02,
-    attributes: "tecido + couro • design moderno",
-    description: "Combinação refinada de tecido e couro com braço diferenciado, peça-chave para salas contemporâneas.",
-    gallery: [sofa02],
-    features: placeholderFeatures,
-  },
-  {
-    name: "Sofá Orfeu",
-    image: sofa03,
-    attributes: "retrátil reclinável • alto conforto",
-    description: "Sofá retrátil e reclinável com encostos generosos e capitonê suave, pensado para máximo relaxamento.",
-    gallery: [sofa03],
-    features: placeholderFeatures,
-  },
-  {
-    name: "Sofá Torino",
-    image: sofa04,
-    attributes: "2 lugares • capitonê clássico",
-    description: "Design clássico com cabeceira capitonê e pés em madeira, perfeito para ambientes elegantes.",
-    gallery: [sofa04],
-    features: placeholderFeatures,
   },
 ];
 
