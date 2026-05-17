@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageCircle, ArrowLeft } from "lucide-react";
+import { MessageCircle, ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   Dialog,
   DialogContent,
