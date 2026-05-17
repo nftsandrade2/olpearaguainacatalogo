@@ -22,18 +22,23 @@ const Hero = () => {
       id="inicio"
       className="relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden text-primary-foreground md:min-h-[76vh]"
     >
+      {/* Background */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBackground})` }}
-      />
-
-      <div
-        className="absolute inset-0 z-[1]"
         style={{
-          background: "linear-gradient(180deg, rgba(10,8,6,0.76) 0%, rgba(18,13,9,0.64) 48%, rgba(8,6,4,0.80) 100%)",
+          backgroundImage: `url(${heroBackground})`,
         }}
       />
 
+      {/* Overlay suavizado */}
+      <div
+        className="absolute inset-0 z-[1]"
+        style={{
+          background: "linear-gradient(180deg, rgba(10,8,6,0.64) 0%, rgba(18,13,9,0.54) 48%, rgba(8,6,4,0.68) 100%)",
+        }}
+      />
+
+      {/* textura */}
       <div
         className="absolute inset-0 z-[2] opacity-[0.01]"
         style={{
@@ -42,15 +47,17 @@ const Hero = () => {
         }}
       />
 
+      {/* vinheta suavizada */}
       <div
         className="absolute inset-0 z-[3]"
         style={{
-          background: "radial-gradient(ellipse at center, transparent 0%, transparent 70%, rgba(0,0,0,0.30) 100%)",
+          background: "radial-gradient(ellipse at center, transparent 0%, transparent 72%, rgba(0,0,0,0.22) 100%)",
         }}
       />
 
       <div className="container relative z-10 mx-auto flex min-h-[72vh] flex-col items-center justify-start px-4 pt-[102px] text-center md:min-h-[76vh] md:pt-[108px]">
-        <div className="mb-3 animate-fade-in">
+        {/* Logo */}
+        <div className="mb-6 animate-fade-in md:mb-7">
           <img
             src={logoOlpe}
             alt="Olpe colchões e sofás"
@@ -59,27 +66,30 @@ const Hero = () => {
             decoding="async"
             fetchPriority="high"
             style={{
-              filter: "drop-shadow(0 6px 20px rgba(0,0,0,0.38))",
+              filter: "drop-shadow(0 6px 20px rgba(0,0,0,0.32))",
             }}
           />
         </div>
 
+        {/* Título apenas desktop */}
         <h1
           className="mx-auto mb-4 hidden max-w-xl animate-fade-in text-center font-light leading-snug text-white md:block md:text-xl lg:text-[1.45rem]"
           style={{
             letterSpacing: "0.01em",
-            textShadow: "0 4px 22px rgba(0,0,0,0.72)",
+            textShadow: "0 4px 18px rgba(0,0,0,0.58)",
           }}
         >
           Conforto e sofisticação para seu lar.
         </h1>
 
-        <p className="mb-3 animate-fade-in text-[10px] font-medium uppercase tracking-[0.13em] text-white/45 md:text-xs md:text-white/55">
+        {/* CTA categorias */}
+        <p className="mb-6 animate-fade-in text-[10px] font-medium uppercase tracking-[0.13em] text-white/45 md:text-xs md:text-white/55">
           Conheça nossos modelos
         </p>
 
+        {/* Card categorias */}
         <div
-          className="mb-3 w-full max-w-[86%] animate-fade-in rounded-[0.95rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
+          className="mb-3 w-full max-w-[86%] animate-fade-in rounded-[1rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
           style={{
             backgroundColor: "rgba(248, 247, 243, 0.95)",
             boxShadow: "0 8px 20px rgba(0,0,0,0.14)",
@@ -115,7 +125,8 @@ const Hero = () => {
           </div>
         </div>
 
-        <p className="mt-4 animate-fade-in text-[10px] font-medium uppercase tracking-[0.18em] text-white/50 md:text-xs">
+        {/* Cidade */}
+        <p className="mt-8 animate-fade-in text-[10px] font-medium uppercase tracking-[0.18em] text-white/50 md:mt-10 md:text-xs">
           Araguaína - TO
         </p>
       </div>
