@@ -77,6 +77,24 @@ const sofas: Product[] = [
     features: placeholderFeatures,
   },
   {
+    name: "Sofá Conect Sally",
+    image: sofaConectSally,
+    attributes: "modular • design contemporâneo",
+    description:
+      "Sofá modular com peças soltas e linhas contemporâneas, ideal para compor ambientes amplos e sofisticados.",
+    gallery: [sofaConectSally],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Sofá Viena",
+    image: sofaViena,
+    attributes: "retrátil • assentos amplos",
+    description:
+      "Sofá retrátil com assentos generosos e capitonê suave, oferecendo conforto envolvente para toda a família.",
+    gallery: [sofaViena],
+    features: placeholderFeatures,
+  },
+  {
     name: "Sofá Elegance Premium",
     image: sofaImage1,
     attributes: "3 lugares • tecido premium",
