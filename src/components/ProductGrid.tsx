@@ -112,9 +112,10 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                   />
                   <DialogClose
                     aria-label="Voltar ao catálogo"
-                    className="absolute top-3 left-3 z-10 inline-flex items-center justify-center h-9 w-9 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 shadow-[0_2px_10px_rgba(0,0,0,0.25)] transition-all hover:bg-white/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                    className="absolute top-1 left-1 z-10 inline-flex items-center justify-center h-11 w-11 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-full"
+                    style={{ filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.55))" }}
                   >
-                    <ArrowLeft size={16} strokeWidth={2.2} />
+                    <ArrowLeft size={22} strokeWidth={2.4} />
                   </DialogClose>
 
                   {gallery.length > 1 && (
@@ -128,9 +129,9 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                           const prev = idx <= 0 ? gallery.length - 1 : idx - 1;
                           setActiveImage(gallery[prev]);
                         }}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center h-9 w-9 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 shadow-[0_2px_10px_rgba(0,0,0,0.25)] transition-all hover:bg-white/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                        className="absolute left-3 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center h-8 w-8 rounded-full bg-white/25 text-white border border-white/30 shadow-[0_2px_8px_rgba(0,0,0,0.22)] transition-colors hover:bg-white/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                       >
-                        <ChevronLeft size={18} strokeWidth={2.2} />
+                        <ChevronLeft size={16} strokeWidth={2.2} />
                       </button>
                       <button
                         type="button"
@@ -141,11 +142,11 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                           const next = idx >= gallery.length - 1 ? 0 : idx + 1;
                           setActiveImage(gallery[next]);
                         }}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center h-9 w-9 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30 shadow-[0_2px_10px_rgba(0,0,0,0.25)] transition-all hover:bg-white/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center h-8 w-8 rounded-full bg-white/25 text-white border border-white/30 shadow-[0_2px_8px_rgba(0,0,0,0.22)] transition-colors hover:bg-white/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                       >
-                        <ChevronRight size={18} strokeWidth={2.2} />
+                        <ChevronRight size={16} strokeWidth={2.2} />
                       </button>
-                      <div className="absolute bottom-3 right-3 z-10 rounded-full bg-black/45 backdrop-blur-md px-2 py-0.5 text-[10px] font-medium text-white/90 tabular-nums tracking-wide">
+                      <div className="absolute bottom-3 right-3 z-10 rounded-full bg-black/50 px-2 py-0.5 text-[10px] font-medium text-white/90 tabular-nums tracking-wide">
                         {gallery.indexOf(activeImage || selected.image) + 1} / {gallery.length}
                       </div>
                     </>
