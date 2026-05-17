@@ -1,11 +1,7 @@
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Products from "@/components/Products";
-import Reviews from "@/components/Reviews";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import TopBar from "@/components/TopBar";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -14,12 +10,8 @@ const Index = () => {
       <main>
         <Hero />
         <Products />
-        <About />
-        <Reviews />
-        <Contact />
       </main>
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };
