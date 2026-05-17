@@ -21,6 +21,13 @@ const colchaoGallery = [colchaoImage1, colchaoImage2, colchaoImage3];
 const poltronaGallery = [poltronaImage1, poltronaImage2, poltronaImage3];
 const camaGallery = [camaImage1, camaImage2, camaImage3];
 
+const placeholderFeatures = {
+  material: "A definir",
+  tamanho: "A definir",
+  conforto: "A definir",
+  acabamento: "A definir",
+};
+
 const sofas: Product[] = [
   {
     name: "Sofá Elegance Premium",
@@ -100,6 +107,38 @@ const sofas: Product[] = [
       conforto: "Estrutura reforçada",
       acabamento: "Capitonê manual",
     },
+  },
+  {
+    name: "Sofá Urban Premium",
+    image: sofaImage1,
+    attributes: "4 lugares • premium",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: sofaGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Sofá Living Concept",
+    image: sofaImage2,
+    attributes: "retrátil • premium",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: sofaGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Sofá Horizon Design",
+    image: sofaImage3,
+    attributes: "modular • sofisticado",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: sofaGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Sofá Infinity Comfort",
+    image: sofaImage1,
+    attributes: "luxo • alto conforto",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: sofaGallery,
+    features: placeholderFeatures,
   },
 ];
 
@@ -182,6 +221,38 @@ const colchoes: Product[] = [
       acabamento: "Pillow euro premium",
     },
   },
+  {
+    name: "Colchão Dream Premium",
+    image: colchaoImage1,
+    attributes: "queen • premium",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: colchaoGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Colchão Ultra Support",
+    image: colchaoImage2,
+    attributes: "firme • ortopédico",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: colchaoGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Colchão Soft Balance",
+    image: colchaoImage3,
+    attributes: "casal • conforto",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: colchaoGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Colchão Gold Sleep",
+    image: colchaoImage1,
+    attributes: "king • luxo",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: colchaoGallery,
+    features: placeholderFeatures,
+  },
 ];
 
 const camas: Product[] = [
@@ -263,6 +334,38 @@ const camas: Product[] = [
       acabamento: "Verniz premium",
     },
   },
+  {
+    name: "Cama Supreme Design",
+    image: camaImage1,
+    attributes: "queen • premium",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: camaGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Cama Imperial Comfort",
+    image: camaImage2,
+    attributes: "king • luxo",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: camaGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Cama Essence Premium",
+    image: camaImage3,
+    attributes: "casal • sofisticada",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: camaGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Cama Signature Collection",
+    image: camaImage1,
+    attributes: "premium • cabeceira",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: camaGallery,
+    features: placeholderFeatures,
+  },
 ];
 
 const poltronas: Product[] = [
@@ -317,6 +420,54 @@ const poltronas: Product[] = [
       conforto: "Giratória 360º",
       acabamento: "Base em aço escovado",
     },
+  },
+  {
+    name: "Poltrona Lounge Premium",
+    image: poltronaImage2,
+    attributes: "premium • moderna",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: poltronaGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Poltrona Signature",
+    image: poltronaImage1,
+    attributes: "clássica • luxo",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: poltronaGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Poltrona Prime Relax",
+    image: poltronaImage3,
+    attributes: "ergonômica • premium",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: poltronaGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Poltrona Modern House",
+    image: poltronaImage1,
+    attributes: "design • sofisticada",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: poltronaGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Poltrona Velvet Touch",
+    image: poltronaImage2,
+    attributes: "veludo • premium",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: poltronaGallery,
+    features: placeholderFeatures,
+  },
+  {
+    name: "Poltrona Imperial Lounge",
+    image: poltronaImage3,
+    attributes: "luxo • conforto",
+    description: "Modelo placeholder para futura substituição.",
+    gallery: poltronaGallery,
+    features: placeholderFeatures,
   },
 ];
 
