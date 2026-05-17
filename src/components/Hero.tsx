@@ -11,10 +11,10 @@ const Hero = () => {
   };
 
   const categories = [
-    { icon: Bed, label: "CAMAS", sectionId: "camas" },
-    { icon: Sofa, label: "SOFÁS", sectionId: "sofas" },
-    { icon: Armchair, label: "POLTRONAS", sectionId: "poltronas" },
     { icon: Layers, label: "COLCHÕES", sectionId: "colchoes" },
+    { icon: Sofa, label: "SOFÁS", sectionId: "sofas" },
+    { icon: Bed, label: "CAMAS", sectionId: "camas" },
+    { icon: Armchair, label: "POLTRONAS", sectionId: "poltronas" },
   ];
 
   return (
@@ -75,37 +75,37 @@ const Hero = () => {
         </h1>
 
         <div
-          className="mb-2 w-full max-w-4xl animate-fade-in rounded-[1.15rem] px-3 py-3 md:px-4 md:py-2"
+          className="mb-2 w-full max-w-[86%] animate-fade-in rounded-[1rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
           style={{
-            backgroundColor: "rgba(248, 247, 243, 0.96)",
-            boxShadow: "0 12px 28px rgba(0,0,0,0.18)",
-            border: "1px solid rgba(200,170,119,0.18)",
+            backgroundColor: "rgba(248, 247, 243, 0.95)",
+            boxShadow: "0 8px 20px rgba(0,0,0,0.14)",
+            border: "1px solid rgba(255,255,255,0.45)",
           }}
         >
-          <div className="grid grid-cols-2 gap-y-2 md:grid-cols-4 md:gap-y-0">
+          <div className="grid grid-cols-2 gap-y-1 md:grid-cols-4 md:gap-y-0">
             {categories.map((category, index) => (
               <button
                 key={category.sectionId}
                 type="button"
                 onClick={() => scrollToSection(category.sectionId)}
                 aria-label={`Ir para seção ${category.label}`}
-                className={`group relative flex flex-col items-center justify-center gap-1 rounded-xl px-2 py-3 transition-all duration-300 hover:bg-white/75 focus:outline-none focus:ring-2 focus:ring-[#C8AA77]/50 md:py-2 ${
+                className={`group relative flex flex-col items-center justify-center gap-0.5 rounded-xl px-2 py-2 transition-all duration-300 hover:bg-white/75 focus:outline-none focus:ring-2 focus:ring-[#C8AA77]/50 md:gap-1 md:py-2 ${
                   index !== categories.length - 1
                     ? "md:after:absolute md:after:right-0 md:after:top-1/2 md:after:h-9 md:after:w-px md:after:-translate-y-1/2 md:after:bg-[#0C1A2A]/10"
                     : ""
                 }`}
               >
                 <category.icon
-                  size={21}
+                  size={18}
                   strokeWidth={1.45}
-                  className="text-[#0C1A2A] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-[#9F7D46]"
+                  className="text-[#0C1A2A] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:text-[#9F7D46] md:h-[21px] md:w-[21px]"
                 />
 
-                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#0C1A2A] transition-colors duration-300 group-hover:text-[#9F7D46] md:text-xs">
+                <span className="text-[9px] font-semibold uppercase tracking-[0.14em] text-[#0C1A2A] transition-colors duration-300 group-hover:text-[#9F7D46] md:text-xs md:tracking-[0.18em]">
                   {category.label}
                 </span>
 
-                <span className="mt-0.5 h-[2px] w-5 rounded-full bg-[#C8AA77] opacity-0 transition-all duration-300 group-hover:opacity-100" />
+                <span className="mt-0.5 h-[2px] w-4 rounded-full bg-[#C8AA77] opacity-0 transition-all duration-300 group-hover:opacity-100 md:w-5" />
               </button>
             ))}
           </div>
