@@ -1,4 +1,3 @@
-import { MessageCircle } from "lucide-react";
 import ProductGrid, { type Product } from "./ProductGrid";
 import sofaImage1 from "@/assets/sofa-1.jpg";
 import sofaImage2 from "@/assets/sofa-2.jpg";
