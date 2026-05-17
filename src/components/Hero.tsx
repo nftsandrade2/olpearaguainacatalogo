@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden text-primary-foreground md:min-h-[76vh]"
+      className="relative flex min-h-[76vh] flex-col items-center justify-center overflow-hidden text-primary-foreground md:min-h-[78vh]"
     >
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -49,7 +49,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="container relative z-10 mx-auto flex min-h-[70vh] flex-col items-center justify-start px-4 pt-[110px] text-center md:min-h-[76vh] md:pt-[112px]">
+      <div className="container relative z-10 mx-auto flex min-h-[76vh] flex-col items-center justify-start px-4 pt-[110px] text-center md:min-h-[78vh] md:pt-[112px]">
         <div className="mb-3 animate-fade-in">
           <img
             src={logoOlpe}
