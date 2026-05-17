@@ -368,26 +368,19 @@ const Products = () => {
   return (
     <div>
       <CategorySection
-        id="sofas"
-        title="Sofás"
-        subtitle="Coleção exclusiva com design contemporâneo e acabamento refinado."
-        products={sofas}
-        ctaLabel="sofás"
-      />
-      <CategorySection
         id="colchoes"
         title="Colchões"
         subtitle="Qualidade premium para o seu descanso perfeito todas as noites."
         products={colchoes}
         ctaLabel="colchões"
-        bg="muted"
       />
       <CategorySection
-        id="poltronas"
-        title="Poltronas"
-        subtitle="Elegância e conforto para compor qualquer ambiente."
-        products={poltronas}
-        ctaLabel="poltronas"
+        id="sofas"
+        title="Sofás"
+        subtitle="Coleção exclusiva com design contemporâneo e acabamento refinado."
+        products={sofas}
+        ctaLabel="sofás"
+        bg="muted"
       />
       <CategorySection
         id="camas"
@@ -395,6 +388,13 @@ const Products = () => {
         subtitle="Estrutura perfeita para noites de sono verdadeiramente completas."
         products={camas}
         ctaLabel="camas"
+      />
+      <CategorySection
+        id="poltronas"
+        title="Poltronas"
+        subtitle="Elegância e conforto para compor qualquer ambiente."
+        products={poltronas}
+        ctaLabel="poltronas"
         bg="muted"
       />
     </div>
