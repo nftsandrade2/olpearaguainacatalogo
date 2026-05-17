@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { MessageCircle, X } from "lucide-react";
+import { MessageCircle, ArrowLeft } from "lucide-react";
 import {
   Dialog,
   DialogContent,
   DialogTitle,
   DialogDescription,
+  DialogClose,
 } from "@/components/ui/dialog";
 
 export interface ProductFeatures {
@@ -99,7 +100,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
           if (!open) setSelected(null);
         }}
       >
-        <DialogContent className="p-0 gap-0 max-w-[95vw] sm:max-w-2xl md:max-w-3xl max-h-[92vh] overflow-hidden flex flex-col rounded-xl">
+        <DialogContent className="p-0 gap-0 max-w-[95vw] sm:max-w-2xl md:max-w-3xl max-h-[92vh] overflow-hidden flex flex-col rounded-xl [&>button.absolute]:hidden">
           {selected && (
             <>
               <div className="flex-1 overflow-y-auto">
@@ -109,6 +110,13 @@ const ProductGrid = ({ products }: ProductGridProps) => {
                     alt={selected.name}
                     className="w-full h-full object-cover"
                   />
+                  <DialogClose
+                    aria-label="Voltar ao catálogo"
+                    className="absolute top-3 left-3 inline-flex items-center gap-1.5 min-h-[44px] min-w-[44px] px-3.5 py-2 rounded-full bg-white/85 backdrop-blur-md text-primary text-sm font-medium shadow-[0_4px_14px_rgba(12,26,42,0.15)] border border-white/60 transition-all hover:bg-white hover:shadow-[0_6px_18px_rgba(12,26,42,0.22)] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    <ArrowLeft size={18} strokeWidth={2.2} />
+                    <span>Voltar</span>
+                  </DialogClose>
                 </div>
 
                 {gallery.length > 1 && (
