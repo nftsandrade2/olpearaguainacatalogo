@@ -15,7 +15,7 @@ const TopBar = () => {
         boxShadow: "0 4px 18px rgba(0,0,0,0.12)",
       }}
     >
-      <div className="container mx-auto flex h-[54px] items-center justify-between gap-3 px-4 md:h-[60px] md:px-6">
+      <div className="container mx-auto flex h-[50px] items-center justify-between gap-3 px-4 md:h-[58px] md:px-6">
         <nav className="hidden items-center gap-8 md:flex">
           {[
             { label: "Contato", id: "contato" },
@@ -40,14 +40,14 @@ const TopBar = () => {
           Como chegar
         </button>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
           <button
             onClick={() => scrollToSection("localizacao")}
-            className="hidden rounded-full px-5 py-2 text-sm font-semibold uppercase tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] md:inline-flex"
+            className="hidden rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] md:inline-flex"
             style={{
-              backgroundColor: "rgba(248, 247, 243, 0.96)",
-              color: "#0D4F7A",
-              border: "1px solid rgba(255,255,255,0.15)",
+              backgroundColor: "transparent",
+              color: "#FFFFFF",
+              border: "1px solid rgba(255,255,255,0.35)",
             }}
           >
             Como chegar
