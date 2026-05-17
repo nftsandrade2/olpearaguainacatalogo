@@ -20,17 +20,13 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden text-primary-foreground md:min-h-[68vh]"
+      className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden text-primary-foreground md:min-h-[76vh]"
     >
-      {/* Background */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-        }}
+        style={{ backgroundImage: `url(${heroBackground})` }}
       />
 
-      {/* Overlay */}
       <div
         className="absolute inset-0 z-[1]"
         style={{
@@ -38,7 +34,6 @@ const Hero = () => {
         }}
       />
 
-      {/* Texture */}
       <div
         className="absolute inset-0 z-[2] opacity-[0.014]"
         style={{
@@ -47,7 +42,6 @@ const Hero = () => {
         }}
       />
 
-      {/* Vignette */}
       <div
         className="absolute inset-0 z-[3]"
         style={{
@@ -55,14 +49,12 @@ const Hero = () => {
         }}
       />
 
-      {/* Content */}
-      <div className="container relative z-10 mx-auto flex min-h-[60vh] flex-col items-center justify-start px-4 pt-[92px] text-center md:min-h-[68vh] md:pt-[96px]">
-        {/* Logo */}
-        <div className="mb-2 animate-fade-in">
+      <div className="container relative z-10 mx-auto flex min-h-[70vh] flex-col items-center justify-start px-4 pt-[110px] text-center md:min-h-[76vh] md:pt-[112px]">
+        <div className="mb-3 animate-fade-in">
           <img
             src={logoOlpe}
             alt="Olpe colchões e sofás"
-            className="h-12 w-auto md:h-20"
+            className="h-11 w-auto md:h-20"
             loading="eager"
             decoding="async"
             fetchPriority="high"
@@ -72,9 +64,8 @@ const Hero = () => {
           />
         </div>
 
-        {/* Title */}
         <h1
-          className="mx-auto mb-3 max-w-xl animate-fade-in text-center text-lg font-light leading-snug text-white md:text-xl lg:text-[1.45rem]"
+          className="mx-auto mb-4 hidden max-w-xl animate-fade-in text-center font-light leading-snug text-white md:block md:text-xl lg:text-[1.45rem]"
           style={{
             letterSpacing: "0.01em",
             textShadow: "0 4px 22px rgba(0,0,0,0.72)",
@@ -83,14 +74,12 @@ const Hero = () => {
           Conforto e sofisticação para seu lar.
         </h1>
 
-        {/* Micro CTA */}
-        <p className="mb-3 animate-fade-in text-[11px] font-medium uppercase tracking-[0.18em] text-white/75 md:text-xs">
+        <p className="mb-3 animate-fade-in text-[11px] font-normal uppercase tracking-[0.14em] text-white/60 md:text-xs">
           Conheça nossos modelos
         </p>
 
-        {/* Categories */}
         <div
-          className="mb-2 w-full max-w-[92%] animate-fade-in rounded-[1rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
+          className="mb-3 w-full max-w-[88%] animate-fade-in rounded-[1rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
           style={{
             backgroundColor: "rgba(248, 247, 243, 0.95)",
             boxShadow: "0 8px 20px rgba(0,0,0,0.14)",
@@ -125,6 +114,10 @@ const Hero = () => {
             ))}
           </div>
         </div>
+
+        <p className="mt-4 animate-fade-in text-[10px] font-medium uppercase tracking-[0.18em] text-white/55 md:text-xs">
+          Araguaína - TO
+        </p>
       </div>
     </section>
   );
