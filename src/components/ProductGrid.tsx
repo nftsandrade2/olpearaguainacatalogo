@@ -59,23 +59,28 @@ const ProductGrid = ({ products }: ProductGridProps) => {
       ? [selected.image]
       : [];
 
+  const MOBILE_EXPANDED_LIMIT = 10;
   const hasMobileOverflow = products.length > MOBILE_LIMIT;
 
   return (
     <>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 md:gap-6">
         {products.map((product, index) => {
-          const hiddenOnMobile =
-            hasMobileOverflow && !expanded && index >= MOBILE_LIMIT;
+          const beyondExpanded = index >= MOBILE_EXPANDED_LIMIT;
+          const inExpansionRange =
+            index >= MOBILE_LIMIT && index < MOBILE_EXPANDED_LIMIT;
+          const mobileClass = beyondExpanded
+            ? "hidden md:flex"
+            : inExpansionRange && !expanded
+            ? "hidden md:flex"
+            : "flex";
           return (
           <button
             key={index}
             type="button"
             onClick={() => openProduct(product)}
             aria-label={`Ver detalhes de ${product.name}`}
-            className={`group relative flex-col overflow-hidden rounded-xl md:rounded-2xl bg-white border border-border/60 shadow-[0_2px_10px_rgba(12,26,42,0.05)] transition-all duration-300 hover:shadow-[0_12px_28px_rgba(12,26,42,0.12)] md:hover:-translate-y-1 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary animate-fade-in ${
-              hiddenOnMobile ? "hidden md:flex" : "flex"
-            }`}
+            className={`group relative flex-col overflow-hidden rounded-xl md:rounded-2xl bg-white border border-border/60 shadow-[0_2px_10px_rgba(12,26,42,0.05)] transition-all duration-300 hover:shadow-[0_12px_28px_rgba(12,26,42,0.12)] md:hover:-translate-y-1 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary animate-fade-in ${mobileClass}`}
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-muted">
               <img
@@ -113,7 +118,7 @@ const ProductGrid = ({ products }: ProductGridProps) => {
             aria-expanded={expanded}
             className="inline-flex items-center justify-center rounded-full border border-primary/20 bg-white px-5 py-2.5 text-sm font-medium text-primary shadow-[0_2px_8px_rgba(12,26,42,0.06)] transition-all hover:bg-primary/5 active:scale-[0.98]"
           >
-            {expanded ? "Ver menos" : "Ver todos os modelos"}
+            {expanded ? "Ver menos" : "Ver mais modelos"}
           </button>
         </div>
       )}
