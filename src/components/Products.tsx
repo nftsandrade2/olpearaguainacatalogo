@@ -26,6 +26,11 @@ import poltronaImage1 from "@/assets/poltrona-1.jpg";
 import poltronaImage2 from "@/assets/poltrona-2.jpg";
 import poltronaImage3 from "@/assets/poltrona-3.jpg";
 
+import poltronaElegance from "@/assets/products/poltronas/elegance.jpg";
+import poltronaDoPapai from "@/assets/products/poltronas/poltrona-do-papai.jpg";
+import poltronaRivieira from "@/assets/products/poltronas/rivieira.jpg";
+import poltronaMalibu from "@/assets/products/poltronas/malibu.jpg";
+
 import camaImage1 from "@/assets/cama-1.jpg";
 import camaImage2 from "@/assets/cama-2.jpg";
 import camaImage3 from "@/assets/cama-3.jpg";
@@ -456,6 +461,42 @@ const camas: Product[] = [
 ];
 
 const poltronas: Product[] = [
+  {
+    name: "Poltrona Elegance",
+    image: poltronaElegance,
+    attributes: "design elegante • premium",
+    description:
+      "Poltrona com design elegante e acabamento premium, perfeita para compor ambientes sofisticados.",
+    gallery: [poltronaElegance],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Poltrona do Papai",
+    image: poltronaDoPapai,
+    attributes: "clássica • alto conforto",
+    description:
+      "Clássica poltrona do papai com encosto alto e estofamento generoso, ideal para horas de relaxamento.",
+    gallery: [poltronaDoPapai],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Poltrona Rivieira",
+    image: poltronaRivieira,
+    attributes: "contemporânea • sofisticada",
+    description:
+      "Linhas contemporâneas com acabamento sofisticado, peça-chave para ambientes refinados.",
+    gallery: [poltronaRivieira],
+    features: placeholderFeatures,
+  },
+  {
+    name: "Poltrona Malibu",
+    image: poltronaMalibu,
+    attributes: "moderna • conforto premium",
+    description:
+      "Design moderno e conforto premium, perfeita para integrar estilo e relaxamento em qualquer ambiente.",
+    gallery: [poltronaMalibu],
+    features: placeholderFeatures,
+  },
   {
     name: "Poltrona Classic Comfort",
     image: poltronaImage1,
