@@ -34,7 +34,7 @@ const TopBar = () => {
         </nav>
 
         <a
-          href="https://maps.app.goo.gl/piN9NU1EUHKuhe2x9"
+          href="https://www.google.com/maps/place/Olpe+-+Colch%C3%B5es+e+Sof%C3%A1s/@-7.2013099,-48.21995,17z/data=!4m15!1m8!3m7!1s0x92d90dc5761675f7:0x7b416bbe595d3d45!2sOlpe+-+Colch%C3%B5es+e+Sof%C3%A1s!8m2!3d-7.2013099!4d-48.21995!10e1!16s%2Fg%2F11wfpnvvwl!3m5!1s0x92d90dc5761675f7:0x7b416bbe595d3d45!8m2!3d-7.2013099!4d-48.21995!16s%2Fg%2F11wfpnvvwl?hl=en-BR&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs font-bold uppercase tracking-[0.08em] text-white md:hidden"
@@ -44,7 +44,7 @@ const TopBar = () => {
 
         <div className="flex items-center gap-2 md:gap-3">
           <a
-            href="https://maps.app.goo.gl/piN9NU1EUHKuhe2x9"
+            href="https://www.google.com/maps/place/Olpe+-+Colch%C3%B5es+e+Sof%C3%A1s/@-7.2013099,-48.21995,17z/data=!4m15!1m8!3m7!1s0x92d90dc5761675f7:0x7b416bbe595d3d45!2sOlpe+-+Colch%C3%B5es+e+Sof%C3%A1s!8m2!3d-7.2013099!4d-48.21995!10e1!16s%2Fg%2F11wfpnvvwl!3m5!1s0x92d90dc5761675f7:0x7b416bbe595d3d45!8m2!3d-7.2013099!4d-48.21995!16s%2Fg%2F11wfpnvvwl?hl=en-BR&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] md:inline-flex"
