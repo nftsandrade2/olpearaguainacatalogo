@@ -33,16 +33,20 @@ const TopBar = () => {
           ))}
         </nav>
 
-        <button
-          onClick={() => scrollToSection("localizacao")}
+        <a
+          href="https://maps.app.goo.gl/piN9NU1EUHKuhe2x9"
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-xs font-bold uppercase tracking-[0.08em] text-white md:hidden"
         >
           Como chegar
-        </button>
+        </a>
 
         <div className="flex items-center gap-2 md:gap-3">
-          <button
-            onClick={() => scrollToSection("localizacao")}
+          <a
+            href="https://maps.app.goo.gl/piN9NU1EUHKuhe2x9"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-[0.08em] transition-all duration-300 hover:scale-[1.02] md:inline-flex"
             style={{
               backgroundColor: "transparent",
@@ -51,7 +55,7 @@ const TopBar = () => {
             }}
           >
             Como chegar
-          </button>
+          </a>
 
           <a
             href="https://wa.me/5563991217070"
