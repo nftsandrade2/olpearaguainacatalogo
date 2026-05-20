@@ -32,14 +32,14 @@ const TopBar = () => {
             href={MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-como-chegar flex items-center gap-1 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.06em] text-white transition-all duration-300 hover:scale-[1.03] md:px-4 md:py-2 md:text-sm"
+            className="btn-como-chegar inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.06em] transition-all duration-300 hover:scale-[1.02] md:px-5 md:py-2 md:text-sm"
             style={{
-              border: "1px solid rgba(200,170,119,0.45)",
-              backgroundColor: "rgba(200,170,119,0.10)",
-              backdropFilter: "blur(4px)",
+              backgroundColor: "rgba(248,247,243,0.92)",
+              color: "#0D4F7A",
+              boxShadow: "0 4px 14px rgba(0,0,0,0.10)",
             }}
           >
-            <MapPin size={11} className="text-[#C8AA77]" />
+            <MapPin size={12} className="text-[#0D4F7A]" />
             Como chegar
           </a>
 
