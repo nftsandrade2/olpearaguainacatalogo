@@ -72,7 +72,7 @@ const Hero = () => {
           </h1>
 
           {/* Label */}
-          <p className="mb-4 animate-fade-in text-[10px] font-medium uppercase tracking-[0.18em] text-white/80 md:text-xs md:text-white/85">
+          <p className="mb-4 mt-7 animate-fade-in text-[10px] font-medium uppercase tracking-[0.18em] text-white/80 md:mt-0 md:text-xs md:text-white/85">
             Conheça nossos modelos
           </p>
 
