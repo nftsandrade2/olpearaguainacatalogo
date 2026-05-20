@@ -1,604 +1,394 @@
 import ProductGrid, { type Product } from "./ProductGrid";
 
-import sofaImage1 from "@/assets/sofa-1.jpg";
-import sofaImage2 from "@/assets/sofa-2.jpg";
-import sofaImage3 from "@/assets/sofa-3.jpg";
+const BASE = "https://raw.githubusercontent.com/nftsandrade2/olpearaguainacatalogo/main/public/imagens";
 
-import sofa01 from "@/assets/products/sofas/sofa-01.jpg";
-import sofa02 from "@/assets/products/sofas/sofa-02.jpg";
-import sofa03 from "@/assets/products/sofas/sofa-03.jpg";
-import sofa04 from "@/assets/products/sofas/sofa-04.jpg";
-import sofaConectSally from "@/assets/products/sofas/conect-sally.jpg";
-import sofaViena from "@/assets/products/sofas/sofa-viena.jpeg";
-
-import colchaoImage1 from "@/assets/colchao-1.jpg";
-import colchaoImage2 from "@/assets/colchao-2.jpg";
-import colchaoImage3 from "@/assets/colchao-3.jpg";
-
-import colchaoLouvrePocket from "@/assets/products/colchoes/louvre-pocket.jpeg";
-import colchaoVienaSky from "@/assets/products/colchoes/viena-sky.png";
-import colchaoEssenStrong from "@/assets/products/colchoes/essen-strong.jpg";
-import colchaoLubeckVisco from "@/assets/products/colchoes/lubeck-visco.jpg";
-import colchaoVeranoGel from "@/assets/products/colchoes/verano-gel.jpg";
-import colchaoViennySkyVisco from "@/assets/products/colchoes/vienny-sky-visco.jpg";
-
-import poltronaImage1 from "@/assets/poltrona-1.jpg";
-import poltronaImage2 from "@/assets/poltrona-2.jpg";
-import poltronaImage3 from "@/assets/poltrona-3.jpg";
-
-import poltronaElegance from "@/assets/products/poltronas/elegance.jpg";
-import poltronaDoPapai from "@/assets/products/poltronas/poltrona-do-papai.jpg";
-import poltronaRivieira from "@/assets/products/poltronas/rivieira.jpg";
-import poltronaMalibu from "@/assets/products/poltronas/malibu.jpg";
-
-import camaImage1 from "@/assets/cama-1.jpg";
-import camaImage2 from "@/assets/cama-2.jpg";
-import camaImage3 from "@/assets/cama-3.jpg";
-
-const sofaGallery = [sofaImage1, sofaImage2, sofaImage3];
-const colchaoGallery = [colchaoImage1, colchaoImage2, colchaoImage3];
-const poltronaGallery = [poltronaImage1, poltronaImage2, poltronaImage3];
-const camaGallery = [camaImage1, camaImage2, camaImage3];
-
-const placeholderFeatures = {
-  material: "A definir",
-  tamanho: "A definir",
-  conforto: "A definir",
-  acabamento: "A definir",
-};
-
+// ─── SOFÁS ───────────────────────────────────────────────────────────────────
 const sofas: Product[] = [
   {
     name: "Sofá Champs",
-    image: sofa01,
+    image: `${BASE}/sofas/sofa-cama-champs-01.webp`,
     attributes: "retrátil • tecido premium",
     description:
       "Sofá retrátil com tecido premium e linhas contemporâneas, ideal para ambientes que pedem conforto e sofisticação.",
-    gallery: [sofa01],
-    features: placeholderFeatures,
+    gallery: [
+      `${BASE}/sofas/sofa-cama-champs-01.webp`,
+      `${BASE}/sofas/sofa-cama-champs-02.webp`,
+      `${BASE}/sofas/sofa-cama-champs-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
     name: "Sofá De Ville",
-    image: sofa02,
+    image: `${BASE}/sofas/sofa-cama-de-ville-01.webp`,
     attributes: "tecido + couro • design moderno",
     description: "Combinação refinada de tecido e couro com braço diferenciado, peça-chave para salas contemporâneas.",
-    gallery: [sofa02],
-    features: placeholderFeatures,
+    gallery: [
+      `${BASE}/sofas/sofa-cama-de-ville-01.webp`,
+      `${BASE}/sofas/sofa-cama-de-ville-02.webp`,
+      `${BASE}/sofas/sofa-cama-de-ville-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Sofá Orfeu",
-    image: sofa03,
-    attributes: "retrátil reclinável • alto conforto",
-    description: "Sofá retrátil e reclinável com encostos generosos e capitonê suave, pensado para máximo relaxamento.",
-    gallery: [sofa03],
-    features: placeholderFeatures,
-  },
-  {
-    name: "Sofá Torino",
-    image: sofa04,
-    attributes: "2 lugares • capitonê clássico",
-    description: "Design clássico com acabamento sofisticado e pés em madeira, perfeito para ambientes elegantes.",
-    gallery: [sofa04],
-    features: placeholderFeatures,
+    name: "Sofá Versalhes",
+    image: `${BASE}/sofas/sofa-cama-versalhes-01.webp`,
+    attributes: "clássico • estofado premium",
+    description:
+      "Design clássico com estofamento generoso e acabamento sofisticado, perfeito para ambientes elegantes.",
+    gallery: [
+      `${BASE}/sofas/sofa-cama-versalhes-01.webp`,
+      `${BASE}/sofas/sofa-cama-versalhes-02.webp`,
+      `${BASE}/sofas/sofa-cama-versalhes-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
     name: "Sofá Conect Sally",
-    image: sofaConectSally,
+    image: `${BASE}/sofas/sofa-conect-sally-01.webp`,
     attributes: "modular • design contemporâneo",
     description:
       "Sofá modular com peças soltas e linhas contemporâneas, ideal para compor ambientes amplos e sofisticados.",
-    gallery: [sofaConectSally],
-    features: placeholderFeatures,
+    gallery: [
+      `${BASE}/sofas/sofa-conect-sally-01.webp`,
+      `${BASE}/sofas/sofa-conect-sally-02.webp`,
+      `${BASE}/sofas/sofa-conect-sally-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
+  },
+  {
+    name: "Sofá Maison",
+    image: `${BASE}/sofas/sofa-maison-01.webp`,
+    attributes: "elegante • acabamento refinado",
+    description: "Sofá com design refinado e linhas elegantes, perfeito para salas que valorizam sofisticação.",
+    gallery: [
+      `${BASE}/sofas/sofa-maison-01.webp`,
+      `${BASE}/sofas/sofa-maison-02.webp`,
+      `${BASE}/sofas/sofa-maison-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
+  },
+  {
+    name: "Sofá Milano",
+    image: `${BASE}/sofas/sofa-milano-01.webp`,
+    attributes: "italiano • design moderno",
+    description: "Inspiração italiana com linhas modernas e conforto premium para ambientes contemporâneos.",
+    gallery: [
+      `${BASE}/sofas/sofa-milano-01.webp`,
+      `${BASE}/sofas/sofa-milano-02.webp`,
+      `${BASE}/sofas/sofa-milano-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
+  },
+  {
+    name: "Sofá Orfeu",
+    image: `${BASE}/sofas/sofa-orfeu-01.webp`,
+    attributes: "retrátil reclinável • alto conforto",
+    description: "Sofá retrátil e reclinável com encostos generosos e capitonê suave, pensado para máximo relaxamento.",
+    gallery: [
+      `${BASE}/sofas/sofa-orfeu-01.webp`,
+      `${BASE}/sofas/sofa-orfeu-02.webp`,
+      `${BASE}/sofas/sofa-orfeu-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
+  },
+  {
+    name: "Sofá Orsay",
+    image: `${BASE}/sofas/sofa-orsay-02.webp`,
+    attributes: "contemporâneo • conforto",
+    description: "Design contemporâneo com acabamento refinado e conforto para o dia a dia.",
+    gallery: [`${BASE}/sofas/sofa-orsay-02.webp`, `${BASE}/sofas/sofa-orsay-03.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
+  },
+  {
+    name: "Sofá Penny",
+    image: `${BASE}/sofas/sofa-penny-01.webp`,
+    attributes: "moderno • versátil",
+    description: "Sofá versátil com design moderno e conforto para toda a família.",
+    gallery: [`${BASE}/sofas/sofa-penny-01.webp`, `${BASE}/sofas/sofa-penny-02.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
+  },
+  {
+    name: "Sofá Torino",
+    image: `${BASE}/sofas/sofa-torino-01.webp`,
+    attributes: "2 lugares • capitonê clássico",
+    description: "Design clássico com acabamento sofisticado e pés em madeira, perfeito para ambientes elegantes.",
+    gallery: [
+      `${BASE}/sofas/sofa-torino-01.webp`,
+      `${BASE}/sofas/sofa-torino-2.webp`,
+      `${BASE}/sofas/sofa-torino-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
     name: "Sofá Viena",
-    image: sofaViena,
+    image: `${BASE}/sofas/sofa-viena-01.webp`,
     attributes: "retrátil • assentos amplos",
     description:
       "Sofá retrátil com assentos generosos e capitonê suave, oferecendo conforto envolvente para toda a família.",
-    gallery: [sofaViena],
-    features: placeholderFeatures,
-  },
-  {
-    name: "Sofá Elegance Premium",
-    image: sofaImage1,
-    attributes: "3 lugares • tecido premium",
-    description:
-      "Sofá de linhas contemporâneas com estofamento generoso, ideal para salas que pedem conforto e sofisticação.",
-    gallery: sofaGallery,
-    features: {
-      material: "Tecido premium anti-manchas",
-      tamanho: "2,10m • 3 lugares",
-      conforto: "Assento alta densidade",
-      acabamento: "Costuras reforçadas",
-    },
-  },
-  {
-    name: "Sofá Modular Comfort",
-    image: sofaImage2,
-    attributes: "modular • design moderno",
-    description: "Composição modular que se adapta ao seu ambiente, perfeita para integrar conforto e estilo.",
-    gallery: sofaGallery,
-    features: {
-      material: "Veludo italiano",
-      tamanho: "2,80m modular",
-      conforto: "Espuma D33 premium",
-      acabamento: "Pés em madeira nobre",
-    },
-  },
-  {
-    name: "Sofá Luxo Velvet",
-    image: sofaImage3,
-    attributes: "veludo • detalhes gold",
-    description: "Elegância em cada detalhe com veludo macio e acabamentos dourados sob medida.",
-    gallery: sofaGallery,
-    features: {
-      material: "Veludo premium",
-      tamanho: "2,40m • 3 lugares",
-      conforto: "Encosto ergonômico",
-      acabamento: "Detalhes em dourado",
-    },
-  },
-  {
-    name: "Sofá Retrátil Bliss",
-    image: sofaImage1,
-    attributes: "retrátil • reclinável",
-    description: "Mecanismo retrátil e reclinável para máximo relaxamento sem abrir mão do design.",
-    gallery: sofaGallery,
-    features: {
-      material: "Suede premium",
-      tamanho: "2,20m retrátil",
-      conforto: "Reclinável multi-posição",
-      acabamento: "Trilhos silenciosos",
-    },
-  },
-  {
-    name: "Sofá Linen Naturale",
-    image: sofaImage2,
-    attributes: "2 lugares • linho natural",
-    description: "Composição leve em linho natural, ideal para ambientes integrados e cheios de luz.",
-    gallery: sofaGallery,
-    features: {
-      material: "Linho 100% natural",
-      tamanho: "1,80m • 2 lugares",
-      conforto: "Almofadas soltas",
-      acabamento: "Costura francesa",
-    },
-  },
-  {
-    name: "Sofá Chesterfield Royal",
-    image: sofaImage3,
-    attributes: "couro • capitonê clássico",
-    description: "Clássico atemporal em couro com capitonê artesanal, peça-chave para ambientes premium.",
-    gallery: sofaGallery,
-    features: {
-      material: "Couro legítimo",
-      tamanho: "2,30m • 3 lugares",
-      conforto: "Estrutura reforçada",
-      acabamento: "Capitonê manual",
-    },
+    gallery: [
+      `${BASE}/sofas/sofa-viena-01.webp`,
+      `${BASE}/sofas/sofa-viena-02.webp`,
+      `${BASE}/sofas/sofa-viena-03.webp`,
+      `${BASE}/sofas/sofa-viena-04.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
 ];
 
+// ─── COLCHÕES ─────────────────────────────────────────────────────────────────
 const colchoes: Product[] = [
   {
-    name: "Colchão Louvre Pocket",
-    image: colchaoLouvrePocket,
-    attributes: "molas pocket • conforto premium",
-    description:
-      "Colchão com molas ensacadas pocket e acabamento sofisticado, oferecendo suporte individualizado e noites de sono verdadeiramente confortáveis.",
-    gallery: [colchaoLouvrePocket],
-    features: placeholderFeatures,
+    name: "Colchão Beverly Visco Gel",
+    image: `${BASE}/colchoes/beverly-visco-gel-01.webp`,
+    attributes: "visco gel • conforto térmico",
+    description: "Tecnologia visco gel que proporciona sensação de frescor e adaptação ao corpo durante toda a noite.",
+    gallery: [
+      `${BASE}/colchoes/beverly-visco-gel-01.webp`,
+      `${BASE}/colchoes/beverly-visco-gel-02.webp`,
+      `${BASE}/colchoes/beverly-viscogel-01.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Colchão Viena Sky",
-    image: colchaoVienaSky,
-    attributes: "pillow top • alto conforto",
-    description:
-      "Colchão com pillow top generoso e acabamento matelassê, pensado para máximo conforto e descanso profundo.",
-    gallery: [colchaoVienaSky],
-    features: placeholderFeatures,
-  },
-  {
-    name: "Colchão Vienny Sky Visco",
-    image: colchaoViennySkyVisco,
-    attributes: "viscoelástico • adaptável",
-    description:
-      "Camada viscoelástica que se adapta ao corpo, aliviando pontos de pressão para um descanso renovador.",
-    gallery: [colchaoViennySkyVisco],
-    features: placeholderFeatures,
-  },
-  {
-    name: "Colchão Lübeck Visco",
-    image: colchaoLubeckVisco,
-    attributes: "visco premium • alto suporte",
-    description:
-      "Colchão visco premium que combina suporte firme e conforto envolvente para noites verdadeiramente restauradoras.",
-    gallery: [colchaoLubeckVisco],
-    features: placeholderFeatures,
-  },
-  {
-    name: "Colchão Verano Gel",
-    image: colchaoVeranoGel,
-    attributes: "tecnologia gel • frescor",
-    description:
-      "Tecnologia gel que proporciona sensação de frescor durante toda a noite, ideal para quem busca conforto térmico.",
-    gallery: [colchaoVeranoGel],
-    features: placeholderFeatures,
+    name: "Box Solteiro com Auxiliar",
+    image: `${BASE}/colchoes/box-solteiro-com-auxiliar-01.webp`,
+    attributes: "solteiro • com auxiliar",
+    description: "Solução prática com cama auxiliar embutida, ideal para quartos de hóspedes e espaços funcionais.",
+    gallery: [
+      `${BASE}/colchoes/box-solteiro-com-auxiliar-01.webp`,
+      `${BASE}/colchoes/box-solteiro-com-auxiliar-02.webp`,
+      `${BASE}/colchoes/box-solteiro-com-auxiliar-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
     name: "Colchão Essen Strong",
-    image: colchaoEssenStrong,
+    image: `${BASE}/colchoes/essen-strong-01.webp`,
     attributes: "firme • alto suporte",
     description:
       "Estrutura robusta com suporte firme, indicada para quem precisa de máxima sustentação durante o descanso.",
-    gallery: [colchaoEssenStrong],
-    features: placeholderFeatures,
+    gallery: [`${BASE}/colchoes/essen-strong-01.webp`, `${BASE}/colchoes/essen-strong-02.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Colchão Premium Comfort",
-    image: colchaoImage1,
-    attributes: "casal • pillow top",
-    description: "Pillow top exclusivo para noites de sono profundas e renovadoras.",
-    gallery: colchaoGallery,
-    features: {
-      material: "Espuma D45 + pillow top",
-      tamanho: "Casal 138x188cm",
-      conforto: "Médio-macio",
-      acabamento: "Tecido knit premium",
-    },
+    name: "Colchão Germain Pocket Visco",
+    image: `${BASE}/colchoes/geman-pocket-visco-01.webp`,
+    attributes: "molas pocket • visco",
+    description:
+      "Combinação de molas ensacadas pocket com camada viscoelástica para suporte individualizado e conforto superior.",
+    gallery: [`${BASE}/colchoes/geman-pocket-visco-01.webp`, `${BASE}/colchoes/german-pocket-visco-02.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Colchão Ortopédico Plus",
-    image: colchaoImage2,
-    attributes: "ortopédico • memory foam",
-    description: "Suporte ortopédico com memory foam que se adapta ao corpo e alivia pontos de pressão.",
-    gallery: colchaoGallery,
-    features: {
-      material: "Memory foam alta densidade",
-      tamanho: "Diversos tamanhos",
-      conforto: "Firme ortopédico",
-      acabamento: "Tecido antialérgico",
-    },
+    name: "Colchão Germain Multi Visco",
+    image: `${BASE}/colchoes/germain-multi-visco-01.webp`,
+    attributes: "multi visco • premium",
+    description: "Múltiplas camadas viscoelásticas para adaptação perfeita ao corpo e descanso profundo.",
+    gallery: [`${BASE}/colchoes/germain-multi-visco-01.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Colchão Luxury Spring",
-    image: colchaoImage3,
-    attributes: "molas ensacadas • matelassê",
-    description: "Molas ensacadas individuais para distribuição perfeita do peso e máximo conforto.",
-    gallery: colchaoGallery,
-    features: {
-      material: "Molas ensacadas + látex",
-      tamanho: "Queen 158x198cm",
-      conforto: "Equilibrado",
-      acabamento: "Matelassê acetinado",
-    },
+    name: "Colchão Louvre Multilastic",
+    image: `${BASE}/colchoes/louvre-multilastic-01.webp`,
+    attributes: "multilastic • conforto",
+    description: "Tecnologia multilastic para distribuição uniforme do peso e máximo conforto durante o sono.",
+    gallery: [`${BASE}/colchoes/louvre-multilastic-01.webp`, `${BASE}/colchoes/louvre-multilastic-02.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Colchão Cloud Soft",
-    image: colchaoImage1,
-    attributes: "viscoelástico • macio",
-    description: "Sensação de leveza graças à camada viscoelástica de alta performance.",
-    gallery: colchaoGallery,
-    features: {
-      material: "Viscoelástico",
-      tamanho: "Casal e queen",
-      conforto: "Macio premium",
-      acabamento: "Tecido respirável",
-    },
+    name: "Colchão Louvre Pocket",
+    image: `${BASE}/colchoes/louvre-pocket-01.webp`,
+    attributes: "molas pocket • conforto premium",
+    description:
+      "Colchão com molas ensacadas pocket e acabamento sofisticado, oferecendo suporte individualizado e noites verdadeiramente confortáveis.",
+    gallery: [
+      `${BASE}/colchoes/louvre-pocket-01.webp`,
+      `${BASE}/colchoes/louvre-pocket-02.webp`,
+      `${BASE}/colchoes/louvre-pocket-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Colchão Firm Support",
-    image: colchaoImage2,
-    attributes: "firme • alto suporte",
-    description: "Estrutura firme para quem precisa de suporte máximo durante o descanso.",
-    gallery: colchaoGallery,
-    features: {
-      material: "Espuma alta densidade",
-      tamanho: "Diversos tamanhos",
-      conforto: "Firme",
-      acabamento: "Bordas reforçadas",
-    },
+    name: "Colchão Lübeck HR",
+    image: `${BASE}/colchoes/lubeck-hr-01.webp`,
+    attributes: "HR • alto suporte",
+    description: "Espuma de alta resiliência para suporte firme e durabilidade superior em qualquer posição de sono.",
+    gallery: [
+      `${BASE}/colchoes/lubeck-hr-01.webp`,
+      `${BASE}/colchoes/lubeck-hr-02.webp`,
+      `${BASE}/colchoes/lubeck-hr-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Colchão King Sleep",
-    image: colchaoImage3,
-    attributes: "king • alto conforto",
-    description: "Tamanho king-size com tecnologia premium para um sono verdadeiramente luxuoso.",
-    gallery: colchaoGallery,
-    features: {
-      material: "Molas + pillow top duplo",
-      tamanho: "King 193x203cm",
-      conforto: "Alto conforto",
-      acabamento: "Pillow euro premium",
-    },
+    name: "Colchão Lübeck Visco",
+    image: `${BASE}/colchoes/lubeck-visco-01.webp`,
+    attributes: "visco premium • alto suporte",
+    description:
+      "Colchão visco premium que combina suporte firme e conforto envolvente para noites verdadeiramente restauradoras.",
+    gallery: [
+      `${BASE}/colchoes/lubeck-visco-01.webp`,
+      `${BASE}/colchoes/lubeck-visco-02.webp`,
+      `${BASE}/colchoes/lubeck-visco-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Colchão Dream Premium",
-    image: colchaoImage1,
-    attributes: "queen • premium",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: colchaoGallery,
-    features: placeholderFeatures,
+    name: "Colchão Verano Gel",
+    image: `${BASE}/colchoes/verano-gel-01.webp`,
+    attributes: "tecnologia gel • frescor",
+    description:
+      "Tecnologia gel que proporciona sensação de frescor durante toda a noite, ideal para quem busca conforto térmico.",
+    gallery: [
+      `${BASE}/colchoes/verano-gel-01.webp`,
+      `${BASE}/colchoes/verano-gel-02.webp`,
+      `${BASE}/colchoes/verano-gel-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Colchão Ultra Support",
-    image: colchaoImage2,
-    attributes: "firme • ortopédico",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: colchaoGallery,
-    features: placeholderFeatures,
+    name: "Colchão Vicky Visco",
+    image: `${BASE}/colchoes/vicky-visco-01.webp`,
+    attributes: "viscoelástico • adaptável",
+    description: "Camada viscoelástica que se adapta ao corpo aliviando pontos de pressão para um descanso renovador.",
+    gallery: [`${BASE}/colchoes/vicky-visco-01.webp`, `${BASE}/colchoes/vicky-visco-02.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Colchão Soft Balance",
-    image: colchaoImage3,
-    attributes: "casal • conforto",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: colchaoGallery,
-    features: placeholderFeatures,
+    name: "Colchão Viena Sky",
+    image: `${BASE}/colchoes/viena-sky-01.webp`,
+    attributes: "pillow top • alto conforto",
+    description:
+      "Colchão com pillow top generoso e acabamento matelassê, pensado para máximo conforto e descanso profundo.",
+    gallery: [`${BASE}/colchoes/viena-sky-01.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Colchão Gold Sleep",
-    image: colchaoImage1,
-    attributes: "king • luxo",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: colchaoGallery,
-    features: placeholderFeatures,
+    name: "Colchão Vienne Sky HR",
+    image: `${BASE}/colchoes/vienne-sky-hr-01.webp`,
+    attributes: "HR • alto conforto",
+    description: "Alta resiliência com pillow top para noites de sono profundas e confortáveis.",
+    gallery: [
+      `${BASE}/colchoes/vienne-sky-hr-01.webp`,
+      `${BASE}/colchoes/vienne-sky-hr-02.webp`,
+      `${BASE}/colchoes/vienne-sky-hr-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
+  },
+  {
+    name: "Colchão Vienny Sky HR",
+    image: `${BASE}/colchoes/vienny-sky-hr-01.webp`,
+    attributes: "HR premium • conforto",
+    description: "Tecnologia HR premium para suporte e conforto ideais em todas as posições de sono.",
+    gallery: [`${BASE}/colchoes/vienny-sky-hr-01.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
+  },
+  {
+    name: "Colchão Vienny Sky Visco",
+    image: `${BASE}/colchoes/vienny-sky-visco-01.webp`,
+    attributes: "viscoelástico • adaptável",
+    description: "Camada viscoelástica que se adapta ao corpo aliviando pontos de pressão para um descanso renovador.",
+    gallery: [
+      `${BASE}/colchoes/vienny-sky-visco-01.webp`,
+      `${BASE}/colchoes/vienny-sky-visco-02.webp`,
+      `${BASE}/colchoes/vienny-sky-visco-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
 ];
 
+// ─── CAMAS ────────────────────────────────────────────────────────────────────
 const camas: Product[] = [
   {
-    name: "Cama Royal Collection",
-    image: camaImage1,
-    attributes: "king • cabeceira estofada",
-    description: "Cabeceira estofada imponente e estrutura robusta para suítes que pedem presença.",
-    gallery: camaGallery,
-    features: {
-      material: "Madeira maciça + estofado",
-      tamanho: "King 193x203cm",
-      conforto: "Cabeceira acolchoada",
-      acabamento: "Tecido premium",
-    },
+    name: "Cama Lyon",
+    image: `${BASE}/camas/cama-lyon-01.webp`,
+    attributes: "estofada • design elegante",
+    description: "Cama estofada com linhas elegantes e cabeceira acolchoada, ideal para quartos sofisticados.",
+    gallery: [
+      `${BASE}/camas/cama-lyon-01.webp`,
+      `${BASE}/camas/cama-lyon-02.webp`,
+      `${BASE}/camas/cama-lyon-03.webp`,
+      `${BASE}/camas/cama-lyon-04.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Cama Platform Modern",
-    image: camaImage2,
-    attributes: "minimalista • madeira maciça",
-    description: "Linhas limpas em madeira maciça, perfeita para ambientes de estética minimalista.",
-    gallery: camaGallery,
-    features: {
-      material: "Madeira maciça",
-      tamanho: "Queen e king",
-      conforto: "Plataforma firme",
-      acabamento: "Verniz fosco",
-    },
-  },
-  {
-    name: "Cama Luxury Tufted",
-    image: camaImage3,
-    attributes: "veludo • capitonê",
-    description: "Capitonê em veludo para um quarto principal com aura de luxo e sofisticação.",
-    gallery: camaGallery,
-    features: {
-      material: "Veludo premium",
-      tamanho: "King 193x203cm",
-      conforto: "Cabeceira capitonê",
-      acabamento: "Botões revestidos",
-    },
-  },
-  {
-    name: "Cama Box Baú Premium",
-    image: camaImage1,
-    attributes: "box baú • amplo",
-    description: "Box com baú espaçoso, unindo praticidade e design para suítes funcionais.",
-    gallery: camaGallery,
-    features: {
-      material: "Estrutura reforçada",
-      tamanho: "Casal e queen",
-      conforto: "Box firme",
-      acabamento: "Pistão à gás",
-    },
-  },
-  {
-    name: "Cama Estofada Milano",
-    image: camaImage2,
-    attributes: "queen • estofada premium",
-    description: "Cama estofada com linhas sofisticadas, ideal para quartos elegantes e aconchegantes.",
-    gallery: camaGallery,
-    features: {
-      material: "Madeira reforçada + tecido premium",
-      tamanho: "Queen 158x198cm",
-      conforto: "Cabeceira acolchoada",
-      acabamento: "Costura refinada",
-    },
-  },
-  {
-    name: "Cama Classic Wood",
-    image: camaImage3,
-    attributes: "madeira • design clássico",
-    description: "Modelo em madeira com presença marcante, perfeito para composições clássicas.",
-    gallery: camaGallery,
-    features: {
-      material: "Madeira maciça",
-      tamanho: "Casal, queen e king",
-      conforto: "Estrutura firme",
-      acabamento: "Verniz premium",
-    },
-  },
-  {
-    name: "Cama Supreme Design",
-    image: camaImage1,
-    attributes: "queen • premium",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: camaGallery,
-    features: placeholderFeatures,
-  },
-  {
-    name: "Cama Imperial Comfort",
-    image: camaImage2,
-    attributes: "king • luxo",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: camaGallery,
-    features: placeholderFeatures,
-  },
-  {
-    name: "Cama Essence Premium",
-    image: camaImage3,
-    attributes: "casal • sofisticada",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: camaGallery,
-    features: placeholderFeatures,
-  },
-  {
-    name: "Cama Signature Collection",
-    image: camaImage1,
-    attributes: "premium • cabeceira",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: camaGallery,
-    features: placeholderFeatures,
+    name: "Cama Supreme",
+    image: `${BASE}/camas/cama-supreme-01.webp`,
+    attributes: "premium • cabeceira imponente",
+    description:
+      "Cama com cabeceira imponente e estrutura robusta, perfeita para suítes que pedem presença e sofisticação.",
+    gallery: [
+      `${BASE}/camas/cama-supreme-01.webp`,
+      `${BASE}/camas/cama-supreme-02.webp`,
+      `${BASE}/camas/cama-supreme-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
 ];
 
+// ─── POLTRONAS ────────────────────────────────────────────────────────────────
 const poltronas: Product[] = [
   {
-    name: "Poltrona Elegance",
-    image: poltronaElegance,
-    attributes: "design elegante • premium",
-    description:
-      "Poltrona com design elegante e acabamento premium, perfeita para compor ambientes sofisticados.",
-    gallery: [poltronaElegance],
-    features: placeholderFeatures,
-  },
-  {
     name: "Poltrona do Papai",
-    image: poltronaDoPapai,
+    image: `${BASE}/poltronas/poltrona-do-papai-01.webp`,
     attributes: "clássica • alto conforto",
-    description:
-      "Clássica poltrona do papai com encosto alto e estofamento generoso, ideal para horas de relaxamento.",
-    gallery: [poltronaDoPapai],
-    features: placeholderFeatures,
+    description: "Clássica poltrona do papai com encosto alto e estofamento generoso, ideal para horas de relaxamento.",
+    gallery: [`${BASE}/poltronas/poltrona-do-papai-01.webp`, `${BASE}/poltronas/poltrona-do-papai-02.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Poltrona Rivieira",
-    image: poltronaRivieira,
-    attributes: "contemporânea • sofisticada",
-    description:
-      "Linhas contemporâneas com acabamento sofisticado, peça-chave para ambientes refinados.",
-    gallery: [poltronaRivieira],
-    features: placeholderFeatures,
+    name: "Poltrona Elegance",
+    image: `${BASE}/poltronas/poltrona-elegance-01.webp`,
+    attributes: "design elegante • premium",
+    description: "Poltrona com design elegante e acabamento premium, perfeita para compor ambientes sofisticados.",
+    gallery: [`${BASE}/poltronas/poltrona-elegance-01.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
+  },
+  {
+    name: "Poltrona Fleur",
+    image: `${BASE}/poltronas/poltrona-fleur-01.webp`,
+    attributes: "moderna • delicada",
+    description: "Design moderno com linhas delicadas e acabamento refinado para ambientes contemporâneos.",
+    gallery: [`${BASE}/poltronas/poltrona-fleur-01.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
     name: "Poltrona Malibu",
-    image: poltronaMalibu,
+    image: `${BASE}/poltronas/poltrona-malibu-01.webp`,
     attributes: "moderna • conforto premium",
-    description:
-      "Design moderno e conforto premium, perfeita para integrar estilo e relaxamento em qualquer ambiente.",
-    gallery: [poltronaMalibu],
-    features: placeholderFeatures,
+    description: "Design moderno e conforto premium, perfeita para integrar estilo e relaxamento em qualquer ambiente.",
+    gallery: [
+      `${BASE}/poltronas/poltrona-malibu-01.webp`,
+      `${BASE}/poltronas/poltrona-malibu-02.webp`,
+      `${BASE}/poltronas/poltrona-malibu-03.webp`,
+      `${BASE}/poltronas/poltrona-malibu-04.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Poltrona Classic Comfort",
-    image: poltronaImage1,
-    attributes: "clássica • madeira nobre",
-    description: "Design clássico em madeira nobre, perfeita para compor cantos de leitura sofisticados.",
-    gallery: poltronaGallery,
-    features: {
-      material: "Madeira nobre + tecido",
-      tamanho: "0,80x0,90m",
-      conforto: "Acolchoamento médio",
-      acabamento: "Verniz natural",
-    },
+    name: "Poltrona Nice",
+    image: `${BASE}/poltronas/poltrona-nice-01.webp`,
+    attributes: "contemporânea • sofisticada",
+    description: "Linhas contemporâneas com acabamento sofisticado, peça-chave para ambientes refinados.",
+    gallery: [
+      `${BASE}/poltronas/poltrona-nice-01.webp`,
+      `${BASE}/poltronas/poltrona-nice-02.webp`,
+      `${BASE}/poltronas/poltrona-nice-03.webp`,
+    ],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
   {
-    name: "Poltrona Modern Relax",
-    image: poltronaImage2,
-    attributes: "veludo • ergonômica",
-    description: "Linhas modernas e veludo premium com ergonomia pensada para horas de relaxamento.",
-    gallery: poltronaGallery,
-    features: {
-      material: "Veludo premium",
-      tamanho: "0,85x0,95m",
-      conforto: "Ergonômica",
-      acabamento: "Pés metálicos",
-    },
-  },
-  {
-    name: "Poltrona Vintage Leather",
-    image: poltronaImage3,
-    attributes: "couro • capitonê",
-    description: "Charme vintage em couro legítimo com capitonê artesanal e acabamento atemporal.",
-    gallery: poltronaGallery,
-    features: {
-      material: "Couro legítimo",
-      tamanho: "0,90x1,00m",
-      conforto: "Encosto alto",
-      acabamento: "Capitonê manual",
-    },
-  },
-  {
-    name: "Poltrona Giratória Lounge",
-    image: poltronaImage1,
-    attributes: "giratória • premium",
-    description: "Base giratória 360º com conforto premium, ideal para ambientes contemporâneos.",
-    gallery: poltronaGallery,
-    features: {
-      material: "Tecido bouclé",
-      tamanho: "0,85x0,90m",
-      conforto: "Giratória 360º",
-      acabamento: "Base em aço escovado",
-    },
-  },
-  {
-    name: "Poltrona Lounge Premium",
-    image: poltronaImage2,
-    attributes: "premium • moderna",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: poltronaGallery,
-    features: placeholderFeatures,
-  },
-  {
-    name: "Poltrona Signature",
-    image: poltronaImage1,
-    attributes: "clássica • luxo",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: poltronaGallery,
-    features: placeholderFeatures,
-  },
-  {
-    name: "Poltrona Prime Relax",
-    image: poltronaImage3,
-    attributes: "ergonômica • premium",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: poltronaGallery,
-    features: placeholderFeatures,
-  },
-  {
-    name: "Poltrona Modern House",
-    image: poltronaImage1,
-    attributes: "design • sofisticada",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: poltronaGallery,
-    features: placeholderFeatures,
-  },
-  {
-    name: "Poltrona Velvet Touch",
-    image: poltronaImage2,
-    attributes: "veludo • premium",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: poltronaGallery,
-    features: placeholderFeatures,
-  },
-  {
-    name: "Poltrona Imperial Lounge",
-    image: poltronaImage3,
-    attributes: "luxo • conforto",
-    description: "Modelo placeholder para futura substituição.",
-    gallery: poltronaGallery,
-    features: placeholderFeatures,
+    name: "Poltrona Rivieira",
+    image: `${BASE}/poltronas/poltrona-rivieira-01.webp`,
+    attributes: "contemporânea • sofisticada",
+    description: "Linhas contemporâneas com acabamento sofisticado, peça-chave para ambientes refinados.",
+    gallery: [`${BASE}/poltronas/poltrona-rivieira-01.webp`],
+    features: { material: "A definir", tamanho: "A definir", conforto: "A definir", acabamento: "A definir" },
   },
 ];
 
+// ─── LAYOUT ───────────────────────────────────────────────────────────────────
 interface CategorySectionProps {
   id: string;
   title: string;
@@ -612,49 +402,42 @@ const CategorySection = ({ id, title, subtitle, products, bg = "default" }: Cate
     <div className="container mx-auto px-4">
       <div className="mb-8 text-center md:mb-12">
         <h2 className="mb-3 font-display text-3xl font-bold text-foreground md:mb-4 md:text-5xl">{title}</h2>
-
         <p className="mx-auto max-w-2xl text-sm text-muted-foreground md:text-lg">{subtitle}</p>
       </div>
-
       <ProductGrid products={products} />
     </div>
   </section>
 );
 
-const Products = () => {
-  return (
-    <div>
-      <CategorySection
-        id="colchoes"
-        title="Colchões"
-        subtitle="Qualidade premium para o seu descanso perfeito todas as noites."
-        products={colchoes}
-        bg="muted"
-      />
-
-      <CategorySection
-        id="sofas"
-        title="Sofás"
-        subtitle="Coleção exclusiva com design contemporâneo e acabamento refinado."
-        products={sofas}
-      />
-
-      <CategorySection
-        id="camas"
-        title="Camas"
-        subtitle="Estrutura perfeita para noites de sono verdadeiramente completas."
-        products={camas}
-        bg="muted"
-      />
-
-      <CategorySection
-        id="poltronas"
-        title="Poltronas"
-        subtitle="Elegância e conforto para compor qualquer ambiente."
-        products={poltronas}
-      />
-    </div>
-  );
-};
+const Products = () => (
+  <div>
+    <CategorySection
+      id="colchoes"
+      title="Colchões"
+      subtitle="Qualidade premium para o seu descanso perfeito todas as noites."
+      products={colchoes}
+      bg="muted"
+    />
+    <CategorySection
+      id="sofas"
+      title="Sofás"
+      subtitle="Coleção exclusiva com design contemporâneo e acabamento refinado."
+      products={sofas}
+    />
+    <CategorySection
+      id="camas"
+      title="Camas"
+      subtitle="Estrutura perfeita para noites de sono verdadeiramente completas."
+      products={camas}
+      bg="muted"
+    />
+    <CategorySection
+      id="poltronas"
+      title="Poltronas"
+      subtitle="Elegância e conforto para compor qualquer ambiente."
+      products={poltronas}
+    />
+  </div>
+);
 
 export default Products;
