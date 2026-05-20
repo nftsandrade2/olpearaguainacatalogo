@@ -65,14 +65,14 @@ const Hero = () => {
 
           {/* H1 — uma linha */}
           <h1
-            className="mb-8 max-w-[20ch] animate-fade-in font-display text-[20px] font-normal leading-[1.3] text-white md:max-w-none md:text-[2rem] lg:text-[2.25rem]"
+            className="mb-8 max-w-[20ch] animate-fade-in font-display text-[18px] font-normal leading-[1.35] text-white md:max-w-none md:text-[2rem] lg:text-[2.25rem]"
             style={{ letterSpacing: "0.005em", textShadow: "0 4px 18px rgba(0,0,0,0.55)" }}
           >
             Transforme sua casa com <em className="not-italic font-medium text-[#E6CB95]">conforto</em> e <em className="not-italic font-medium text-[#E6CB95]">elegância</em>.
           </h1>
 
           {/* Label */}
-          <p className="mb-4 mt-12 animate-fade-in text-[11.5px] font-medium uppercase tracking-[0.2em] md:mt-6 md:text-[13px]" style={{ color: "rgba(255,255,255,0.82)" }}>
+          <p className="mb-4 mt-12 animate-fade-in text-[11.5px] font-medium uppercase tracking-[0.2em] md:mt-6 md:text-[13px]" style={{ color: "rgba(255,255,255,0.93)" }}>
             Conheça nossos modelos
           </p>
 
