@@ -1,13 +1,10 @@
 import logoOlpe from "@/assets/logo-olpe.png";
 import heroBackground from "@/assets/hero-background.webp";
-import { Bed, Sofa, Armchair, Layers, MapPin, ChevronDown } from "lucide-react";
+import { Bed, Sofa, Armchair, Layers, MapPin } from "lucide-react";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const categories = [
@@ -24,7 +21,7 @@ const Hero = () => {
       id="inicio"
       className="relative flex min-h-[72vh] flex-col items-center justify-center overflow-hidden text-primary-foreground md:min-h-[76vh]"
     >
-      {/* Background — preload via link rel=preload no index.html recomendado */}
+      {/* Background */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
@@ -62,25 +59,13 @@ const Hero = () => {
           />
         </div>
 
-        {/* Proposta de valor — visível mobile e desktop */}
+        {/* H1 — uma linha, sem quebra */}
         <h1
-          className="mx-auto mb-1 max-w-xs animate-fade-in text-center text-base font-semibold leading-snug text-white md:max-w-xl md:text-xl lg:text-[1.45rem]"
+          className="mb-5 animate-fade-in whitespace-nowrap text-[13px] font-semibold text-white md:text-xl lg:text-[1.45rem]"
           style={{ letterSpacing: "0.01em", textShadow: "0 4px 18px rgba(0,0,0,0.58)" }}
         >
-          Colchões, Sofás e Camas em Araguaína
+          O melhor em Colchões, Sofás e Camas em Araguaína
         </h1>
-
-        {/* Endereço clicável */}
-        <a
-          href={mapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mb-5 flex animate-fade-in items-center gap-1 text-[11px] font-medium text-white/70 underline-offset-2 transition-colors hover:text-white/90 hover:underline md:mb-6 md:text-xs"
-          aria-label="Ver endereço no Google Maps"
-        >
-          <MapPin size={11} className="shrink-0 text-[#C8AA77]" />
-          Av. Marginal Neblina, 1197 — Lot. Alaska, Araguaína - TO
-        </a>
 
         {/* Label categorias */}
         <p className="mb-3 animate-fade-in text-[10px] font-medium uppercase tracking-[0.13em] text-white/45 md:text-xs md:text-white/55">
@@ -89,7 +74,7 @@ const Hero = () => {
 
         {/* Card categorias */}
         <div
-          className="mb-5 w-full max-w-[86%] animate-fade-in rounded-[1rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
+          className="mb-8 w-full max-w-[86%] animate-fade-in rounded-[1rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
           style={{
             backgroundColor: "rgba(248, 247, 243, 0.95)",
             boxShadow: "0 8px 20px rgba(0,0,0,0.14)",
@@ -123,28 +108,17 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Botões CTA — Como Chegar em destaque */}
-        <div className="flex animate-fade-in flex-col items-center gap-2 sm:flex-row sm:gap-3">
-          <a
-            href={mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-full bg-[#C8AA77] px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-lg transition-all duration-300 hover:bg-[#b8975f] hover:shadow-xl active:scale-95 md:px-6 md:py-3 md:text-xs"
-            aria-label="Como chegar na loja"
-          >
-            <MapPin size={13} />
-            Como Chegar
-          </a>
-
-          <button
-            type="button"
-            onClick={() => scrollToSection("colchoes")}
-            className="flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/90 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 active:scale-95 md:px-6 md:py-3 md:text-xs"
-          >
-            Ver Catálogo
-            <ChevronDown size={13} />
-          </button>
-        </div>
+        {/* Endereço — rodapé do hero, discreto e clicável */}
+        <a
+          href={mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="animate-fade-in flex items-center gap-1.5 text-[10px] font-medium text-white/50 transition-colors hover:text-white/80 md:text-xs"
+          aria-label="Ver endereço no Google Maps"
+        >
+          <MapPin size={10} className="shrink-0 text-[#C8AA77]" />
+          Av. Marginal Neblina, 1197 — Lot. Alaska, Araguaína - TO
+        </a>
       </div>
     </section>
   );
