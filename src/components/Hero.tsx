@@ -65,14 +65,14 @@ const Hero = () => {
 
           {/* H1 — uma linha */}
           <h1
-            className="mb-8 animate-fade-in font-display text-[15px] font-normal leading-[1.25] text-white md:whitespace-nowrap md:text-[1.7rem] lg:text-[1.95rem]"
+            className="mb-8 max-w-[20ch] animate-fade-in font-display text-[20px] font-normal leading-[1.3] text-white md:max-w-none md:text-[2rem] lg:text-[2.25rem]"
             style={{ letterSpacing: "0.005em", textShadow: "0 4px 18px rgba(0,0,0,0.55)" }}
           >
-            O melhor em <em className="not-italic font-medium text-[#E6CB95]">Colchões</em>, <em className="not-italic font-medium text-[#E6CB95]">Sofás</em> e <em className="not-italic font-medium text-[#E6CB95]">Camas</em> em Araguaína
+            Transforme sua casa com <em className="not-italic font-medium text-[#E6CB95]">conforto</em> e <em className="not-italic font-medium text-[#E6CB95]">elegância</em>.
           </h1>
 
           {/* Label */}
-          <p className="mb-4 mt-7 animate-fade-in text-[10px] font-medium uppercase tracking-[0.18em] text-white/80 md:mt-0 md:text-xs md:text-white/85">
+          <p className="mb-4 mt-12 animate-fade-in text-[11.5px] font-medium uppercase tracking-[0.2em] md:mt-6 md:text-[13px]" style={{ color: "rgba(255,255,255,0.82)" }}>
             Conheça nossos modelos
           </p>
 
