@@ -26,7 +26,7 @@ const TopBar = () => {
           boxShadow: "0 4px 18px rgba(0,0,0,0.12)",
         }}
       >
-        <div className="container mx-auto flex h-[46px] items-center justify-between gap-2 px-4 md:h-[58px] md:px-6">
+        <div className="container mx-auto flex h-[46px] items-center justify-between gap-2 px-5 md:h-[58px] md:px-6">
           {/* COMO CHEGAR */}
           <a
             href={MAPS_URL}
