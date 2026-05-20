@@ -34,7 +34,7 @@ const TopBar = () => {
             rel="noopener noreferrer"
             className="btn-como-chegar inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.06em] transition-all duration-300 hover:scale-[1.02] md:px-5 md:py-2 md:text-sm"
             style={{
-              backgroundColor: "rgba(248,247,243,0.92)",
+              backgroundColor: "rgba(248,247,243,0.90)",
               color: "#0D4F7A",
               boxShadow: "0 4px 14px rgba(0,0,0,0.10)",
             }}
