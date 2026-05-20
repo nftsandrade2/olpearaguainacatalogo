@@ -118,7 +118,7 @@ const Hero = () => {
           href={MAPS_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="animate-fade-in flex items-center gap-1.5 text-[10px] font-medium text-white/45 transition-colors hover:text-white/75 md:text-xs"
+          className="animate-fade-in flex items-center gap-1.5 text-[10px] font-medium transition-colors hover:text-white md:text-xs" style={{ color: "rgba(255,255,255,0.88)" }}
           aria-label="Ver endereço no Google Maps"
         >
           <MapPin size={10} className="shrink-0 text-[#C8AA77]" />
