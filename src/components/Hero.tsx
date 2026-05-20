@@ -78,7 +78,7 @@ const Hero = () => {
 
           {/* Card categorias */}
           <div
-            className="w-full max-w-[86%] animate-fade-in rounded-[1rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
+            className="w-full max-w-[97%] animate-fade-in rounded-[1rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
             style={{
               backgroundColor: "rgba(248, 247, 243, 0.95)",
               boxShadow: "0 8px 20px rgba(0,0,0,0.14)",
