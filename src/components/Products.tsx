@@ -218,24 +218,6 @@ const colchoes: Product[] = [
     },
   },
   {
-    name: "Colchão Louvre Pocket",
-    image: `${BASE}/colchoes/louvre-pocket-01.webp`,
-    attributes: "molas pocket • conforto premium",
-    description:
-      "Tecido em malha especial com faixa lateral em veludo e bordado de 2 cm. Estrutura com espuma D-28 selada, molas pocket ensacadas individualmente e lâmina de espuma aglomerado D80 kg/m³. Suporte de 110 kg por lado. Garantia de 1 ano.",
-    gallery: [
-      `${BASE}/colchoes/louvre-pocket-01.webp`,
-      `${BASE}/colchoes/louvre-pocket-02.webp`,
-      `${BASE}/colchoes/louvre-pocket-03.webp`,
-    ],
-    features: {
-      material: "Espuma D-28 + molas pocket",
-      tamanho: "88x188 / 108x198 / 138x188 / 158x198 (26cm alt.)",
-      conforto: "Suporte 110kg/lado",
-      acabamento: "Malha especial • faixa veludo • bordado",
-    },
-  },
-  {
     name: "Colchão Germain Pocket Visco",
     image: `${BASE}/colchoes/geman-pocket-visco-01.webp`,
     attributes: "molas pocket • visco • premium",
@@ -247,20 +229,6 @@ const colchoes: Product[] = [
       tamanho: "88x188 / 108x188 / 138x188 / 158x188 / 193x203 (30cm alt.)",
       conforto: "Suporte 150kg/lado",
       acabamento: "Malha 280g • faixa linho",
-    },
-  },
-  {
-    name: "Colchão Germain Multi Visco",
-    image: `${BASE}/colchoes/germain-multi-visco-01.webp`,
-    attributes: "multi visco • premium",
-    description:
-      "Múltiplas camadas viscoelásticas para adaptação perfeita ao corpo, alívio de pontos de pressão e descanso profundo.",
-    gallery: [`${BASE}/colchoes/germain-multi-visco-01.webp`],
-    features: {
-      material: "Múltiplas camadas visco",
-      tamanho: "Consulte na loja",
-      conforto: "Consulte na loja",
-      acabamento: "Consulte na loja",
     },
   },
   {
@@ -392,6 +360,38 @@ const colchoes: Product[] = [
       material: "Viscoelástico",
       tamanho: "Consulte na loja",
       conforto: "Adaptável ao corpo",
+      acabamento: "Consulte na loja",
+    },
+  },
+  {
+    name: "Colchão Louvre Pocket",
+    image: `${BASE}/colchoes/louvre-pocket-01.webp`,
+    attributes: "molas pocket • conforto premium",
+    description:
+      "Tecido em malha especial com faixa lateral em veludo e bordado de 2 cm. Estrutura com espuma D-28 selada, molas pocket ensacadas individualmente e lâmina de espuma aglomerado D80 kg/m³. Suporte de 110 kg por lado. Garantia de 1 ano.",
+    gallery: [
+      `${BASE}/colchoes/louvre-pocket-01.webp`,
+      `${BASE}/colchoes/louvre-pocket-02.webp`,
+      `${BASE}/colchoes/louvre-pocket-03.webp`,
+    ],
+    features: {
+      material: "Espuma D-28 + molas pocket",
+      tamanho: "88x188 / 108x198 / 138x188 / 158x198 (26cm alt.)",
+      conforto: "Suporte 110kg/lado",
+      acabamento: "Malha especial • faixa veludo • bordado",
+    },
+  },
+  {
+    name: "Colchão Germain Multi Visco",
+    image: `${BASE}/colchoes/germain-multi-visco-01.webp`,
+    attributes: "multi visco • premium",
+    description:
+      "Múltiplas camadas viscoelásticas para adaptação perfeita ao corpo, alívio de pontos de pressão e descanso profundo.",
+    gallery: [`${BASE}/colchoes/germain-multi-visco-01.webp`],
+    features: {
+      material: "Múltiplas camadas visco",
+      tamanho: "Consulte na loja",
+      conforto: "Consulte na loja",
       acabamento: "Consulte na loja",
     },
   },
