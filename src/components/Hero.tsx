@@ -72,7 +72,7 @@ const Hero = () => {
           </h1>
 
           {/* Label */}
-          <p className="mb-4 mt-12 animate-fade-in text-[11.5px] font-medium uppercase tracking-[0.2em] md:mt-6 md:text-[13px]" style={{ color: "rgba(255,255,255,0.93)" }}>
+          <p className="mb-4 mt-12 animate-fade-in text-[11.5px] font-medium uppercase tracking-[0.2em] md:mt-6 md:text-[13px]" style={{ color: "rgba(255,255,255,0.96)" }}>
             Conheça nossos modelos
           </p>
 
