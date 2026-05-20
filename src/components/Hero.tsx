@@ -65,14 +65,14 @@ const Hero = () => {
 
           {/* H1 — uma linha */}
           <h1
-            className="mb-8 animate-fade-in whitespace-nowrap text-[12.5px] font-semibold text-white md:text-xl lg:text-[1.45rem]"
-            style={{ letterSpacing: "0.01em", textShadow: "0 4px 18px rgba(0,0,0,0.58)" }}
+            className="mb-8 animate-fade-in font-display text-[15px] font-normal leading-[1.25] text-white md:whitespace-nowrap md:text-[1.7rem] lg:text-[1.95rem]"
+            style={{ letterSpacing: "0.005em", textShadow: "0 4px 18px rgba(0,0,0,0.55)" }}
           >
-            O melhor em Colchões, Sofás e Camas em Araguaína
+            O melhor em <em className="not-italic font-medium text-[#E6CB95]">Colchões</em>, <em className="not-italic font-medium text-[#E6CB95]">Sofás</em> e <em className="not-italic font-medium text-[#E6CB95]">Camas</em> em Araguaína
           </h1>
 
           {/* Label */}
-          <p className="mb-4 animate-fade-in text-[10px] font-medium uppercase tracking-[0.13em] text-white/45 md:text-xs md:text-white/55">
+          <p className="mb-4 animate-fade-in text-[10px] font-medium uppercase tracking-[0.18em] text-white/80 md:text-xs md:text-white/85">
             Conheça nossos modelos
           </p>
 
