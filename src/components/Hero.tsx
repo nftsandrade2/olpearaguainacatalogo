@@ -72,13 +72,13 @@ const Hero = () => {
           </h1>
 
           {/* Label */}
-          <p className="mb-4 mt-12 animate-fade-in text-[11.5px] font-medium uppercase tracking-[0.2em] md:mt-6 md:text-[13px]" style={{ color: "rgba(255,255,255,0.93)" }}>
+          <p className="mb-4 mt-12 animate-fade-in text-[11.5px] font-medium uppercase tracking-[0.2em] md:mt-6 md:text-[13px]" style={{ color: "rgba(255,255,255,0.96)" }}>
             Conheça nossos modelos
           </p>
 
           {/* Card categorias */}
           <div
-            className="w-full max-w-[86%] animate-fade-in rounded-[1rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
+            className="w-full max-w-[97%] animate-fade-in rounded-[1rem] px-2 py-2 md:max-w-4xl md:rounded-[1.15rem] md:px-4 md:py-2"
             style={{
               backgroundColor: "rgba(248, 247, 243, 0.95)",
               boxShadow: "0 8px 20px rgba(0,0,0,0.14)",
@@ -118,7 +118,7 @@ const Hero = () => {
           href={MAPS_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="animate-fade-in flex items-center gap-1.5 text-[10px] font-medium text-white/45 transition-colors hover:text-white/75 md:text-xs"
+          className="animate-fade-in flex items-center gap-1.5 text-[10px] font-medium transition-colors hover:text-white md:text-xs" style={{ color: "rgba(255,255,255,0.88)" }}
           aria-label="Ver endereço no Google Maps"
         >
           <MapPin size={10} className="shrink-0 text-[#C8AA77]" />
