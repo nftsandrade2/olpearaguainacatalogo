@@ -68,7 +68,7 @@ const Hero = () => {
             className="mb-8 max-w-[20ch] animate-fade-in font-display text-[18px] font-normal leading-[1.35] text-white md:max-w-none md:text-[2rem] lg:text-[2.25rem]"
             style={{ letterSpacing: "0.005em", textShadow: "0 4px 18px rgba(0,0,0,0.55)" }}
           >
-            Transforme sua casa com <em className="not-italic font-medium text-[#E6CB95]">conforto</em> e <em className="not-italic font-medium text-[#E6CB95]">elegância</em>.
+            Referência em <em className="not-italic font-medium text-[#E6CB95]">colchões</em> e <em className="not-italic font-medium text-[#E6CB95]">sofás</em> em Araguaína
           </h1>
 
           {/* Label */}
